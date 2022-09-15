@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:string"
+    },
+    "X": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "result": {
+    "item": "imbleeding:bandage"
+  }
+}

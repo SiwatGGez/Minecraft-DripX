@@ -1,0 +1,9 @@
+{
+  "effect.imbleeding.bleed": "Bleed",
+  "effect.imbleeding.bleedout": "Bleed out",
+  "effect.imbleeding.health_loss": "Health Loss",
+
+  "item.imbleeding.bandage": "Bandage",
+  "item.imbleeding.honey_bandage": "Honey Bandage",
+  "item.imbleeding.sticky_bandage": "Sticky Bandage"
+}

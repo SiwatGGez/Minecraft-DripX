@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "imbleeding",
+  "version": "${version}",
+
+  "name": "Bleed Effect",
+  "description": "Adds bleed effect when player takes damage",
+  "authors": [
+    "Wookash Fryc"
+  ],
+  "contact": {
+    "email": "frycmod@gmail.com"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.fryc.imbleeding.ImBleeding"
+    ]
+  },
+  "mixins": [
+    "imbleeding.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
