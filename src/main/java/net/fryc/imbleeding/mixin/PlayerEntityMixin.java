@@ -23,7 +23,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
         super(entityType, world);
     }
     int toughness;
-    //Causes player to bleed after taking damage
+    //Causes player to bleed after taking damage and gives darkness at low hp
     @Inject(method = "applyDamage(Lnet/minecraft/entity/damage/DamageSource;F)V", at = @At("TAIL"))
     public void applyBleed(DamageSource source, float amount, CallbackInfo ci) {
         PlayerEntity player = ((PlayerEntity) (Object) this);
