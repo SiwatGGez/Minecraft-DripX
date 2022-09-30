@@ -5,5 +5,17 @@
 
   "item.imbleeding.bandage": "Bandage",
   "item.imbleeding.honey_bandage": "Honey Bandage",
-  "item.imbleeding.sticky_bandage": "Sticky Bandage"
+  "item.imbleeding.sticky_bandage": "Sticky Bandage",
+
+  "gamerule.bleedoutKills": "Bleed out can kill",
+  "gamerule.bleedingStopsFoodHealing": "Bleeding stops food healing",
+  "gamerule.enableMeleeEffectUpgrading": "Melee attacks upgrade bleeding",
+  "gamerule.enableMeleeEffectUpgrading.description": "While bleeding, player get Bleed II with increased duration after getting damage from melee attack",
+  "gamerule.enableArrowEffectUpgrading": "Arrows upgrade bleeding",
+  "gamerule.enableArrowEffectUpgrading.description": "While bleeding, player get Bleed II with increased duration after getting damage from arrow",
+  "gamerule.enableDarknessAtLowHp": "Player gets darkness after taking damage at low HP",
+
+  "gamerule.meleeBleedLength": "Length of bleeding from melee attacks",
+  "gamerule.arrowBleedLength": "Length of bleeding from arrows",
+  "gamerule.healthLossLength": "Length of health loss from spider attacks"
 }
