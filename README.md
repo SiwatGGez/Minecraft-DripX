@@ -1,4 +1,4 @@
-# BleedEffect
+# Haemorrhage
 This mod Makes player get Bleeding status effect after taking damage and adds bandages.
 Length of bleeding depends on damage taken and players armor.
 
