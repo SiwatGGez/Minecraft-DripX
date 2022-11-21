@@ -3,22 +3,30 @@
   "id": "imbleeding",
   "version": "${version}",
 
-  "name": "Bleed Effect",
-  "description": "Adds bleed effect when player takes damage",
+  "name": "Haemorrhage",
+  "description": "Makes player get Bleeding status effect after taking damage and adds bandages",
   "authors": [
     "Wookash Fryc"
   ],
   "contact": {
-    "email": "frycmod@gmail.com"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/haemorrhage",
+    "sources": "https://github.com/Xires87/BleedEffect",
+    "issues": "https://github.com/Xires87/BleedEffect/issues"
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/imbleeding/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.fryc.imbleeding.ImBleeding"
+    ],
+    "client": [
+      "net.fryc.imbleeding.ImBleedingClient"
+    ],
+    "modmenu": [
+      "net.fryc.imbleeding.config.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -29,7 +37,8 @@
     "fabricloader": ">=0.14.9",
     "fabric-api": "*",
     "minecraft": "~1.19",
-    "java": ">=17"
+    "java": ">=17",
+    "cloth-config": ">=8.2.88"
   },
   "suggests": {
     "another-mod": "*"

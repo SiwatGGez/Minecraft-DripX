@@ -1,21 +1,32 @@
 {
-  "effect.imbleeding.bleed": "Bleed",
+  "effect.imbleeding.bleed": "Bleeding",
   "effect.imbleeding.bleedout": "Bleed out",
   "effect.imbleeding.health_loss": "Health Loss",
 
   "item.imbleeding.bandage": "Bandage",
   "item.imbleeding.honey_bandage": "Honey Bandage",
   "item.imbleeding.sticky_bandage": "Sticky Bandage",
+  "item.imbleeding.herbal_balm": "Herbal Balm",
 
-  "gamerule.bleedoutKills": "Bleed out can kill",
-  "gamerule.bleedingStopsFoodHealing": "Bleeding stops food healing",
-  "gamerule.enableMeleeEffectUpgrading": "Melee attacks upgrade bleeding",
-  "gamerule.enableMeleeEffectUpgrading.description": "While bleeding, player get Bleed II with increased duration after getting damage from melee attack",
-  "gamerule.enableArrowEffectUpgrading": "Arrows upgrade bleeding",
-  "gamerule.enableArrowEffectUpgrading.description": "While bleeding, player get Bleed II with increased duration after getting damage from arrow",
-  "gamerule.enableDarknessAtLowHp": "Player gets darkness after taking damage at low HP",
+  "text.autoconfig.imbleeding.title": "Haemorrhage Config",
+  "text.autoconfig.imbleeding.category.bleeding": "Bleeding",
+  "text.autoconfig.imbleeding.category.bleeding_length": "Effects Length",
+  "text.autoconfig.imbleeding.category.visual": "Visual Effects",
 
-  "gamerule.meleeBleedLength": "Length of bleeding from melee attacks",
-  "gamerule.arrowBleedLength": "Length of bleeding from arrows",
-  "gamerule.healthLossLength": "Length of health loss from spider attacks"
+  "text.autoconfig.imbleeding.option.enableDarknessAtLowHp": "Enable darkness at low HP",
+  "text.autoconfig.imbleeding.option.enableDarknessAtLowHp.@Tooltip": "Player will get darkness after taking damage at low HP",
+  "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp": "Enable blindness at low HP",
+  "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp.@Tooltip": "Player will get blindness at 1 hp",
+
+  "text.autoconfig.imbleeding.option.bleedoutKills": "Bleed out can kill",
+  "text.autoconfig.imbleeding.option.bleedingStopsFoodHealing": "Bleeding stops food healing",
+  "text.autoconfig.imbleeding.option.fireDamageLowersBleedingDuration": "Fire damage lowers duration of bleeding",
+  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading": "Melee attacks upgrade bleeding (or health loss, when attacked by spider)",
+  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading.@Tooltip": "While having Bleeding I, player will get Bleeding II with increased duration after getting damage from melee attack",
+  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading": "Arrows upgrade bleeding",
+  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading.@Tooltip": "While having Bleeding I, player will get Bleeding II with increased duration after getting damage from arrow",
+
+  "text.autoconfig.imbleeding.option.meleeBleedLength": "Length of bleeding from melee attacks",
+  "text.autoconfig.imbleeding.option.arrowBleedLength": "Length of bleeding from arrows",
+  "text.autoconfig.imbleeding.option.healthLossLength": "Length of health loss from spider attacks"
 }

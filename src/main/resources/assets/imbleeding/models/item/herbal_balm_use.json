@@ -1,0 +1,10 @@
+{
+  "parent": "imbleeding:item/herbal_balm",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [ 40, 100, 25 ],
+      "translation": [ 1.13, 3.2, 1.13 ],
+      "scale": [ 0.68, 0.68, 0.68 ]
+    }
+  }
+}

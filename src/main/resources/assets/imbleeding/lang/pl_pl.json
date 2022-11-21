@@ -1,0 +1,32 @@
+{
+  "item.imbleeding.bandage": "Bandaż",
+  "item.imbleeding.honey_bandage": "Bandaż z Miodem",
+  "item.imbleeding.sticky_bandage": "Lepki Bandaż",
+  "item.imbleeding.herbal_balm": "Ziołowy Balsam",
+
+  "effect.imbleeding.bleed": "Krwawienie",
+  "effect.imbleeding.bleedout": "Wykrwawienie",
+  "effect.imbleeding.health_loss": "Utrata Zdrowia",
+  
+  "text.autoconfig.imbleeding.title": "Konfiguracja Haemorrhage",
+  "text.autoconfig.imbleeding.category.bleeding": "Krwawienie",
+  "text.autoconfig.imbleeding.category.bleeding_length": "Długość Efektów",
+  "text.autoconfig.imbleeding.category.visual": "Efekty Wizualne",
+
+  "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp": "Włącz oślepienie przy niskim zdrowiu",
+  "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp.@Tooltip": "Gracz dostanie oślepienie, gdy jego zdrowie będzie wynosić 1",
+  "text.autoconfig.imbleeding.option.enableDarknessAtLowHp": "Włącz ciemność przy niskim zdrowiu",
+  "text.autoconfig.imbleeding.option.enableDarknessAtLowHp.@Tooltip": "Gracz dostanie ciemność, po otrzymaniu obrażen na niskim zdrowiu",
+
+  "text.autoconfig.imbleeding.option.bleedoutKills": "Wykrwawienie może zabić",
+  "text.autoconfig.imbleeding.option.bleedingStopsFoodHealing": "Krwawienie zatrzymuje leczenie z jedzenia",
+  "text.autoconfig.imbleeding.option.fireDamageLowersBleedingDuration": "Obrażenia od ognia zmniejszają długość krwawienia",
+  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading": "Ataki wręcz ulepszają krwawienie (lub utratę zdrowia, kiedy atakuje pająk)",
+  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading.@Tooltip": "Kiedy gracz ma Krwawienie I i otrzyma obrażenia od ataku wręcz, dostanie Krwawienie II, które dodatkowo będzie trwało dłużej",
+  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading": "Strzały ulepszają krwawienie",
+  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading.@Tooltip": "Kiedy gracz ma Krwawienie I i otrzyma obrażenia od strzały, dostanie Krwawienie II, które dodatkowo będzie trwało dłużej",
+
+  "text.autoconfig.imbleeding.option.meleeBleedLength": "Długość krwawienia od ataków wręcz",
+  "text.autoconfig.imbleeding.option.arrowBleedLength": "Długość krwawienia od strzał",
+  "text.autoconfig.imbleeding.option.healthLossLength": "Długość utraty zdrowia od ataków pająków"
+}

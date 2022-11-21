@@ -1,7 +1,7 @@
 package net.fryc.imbleeding.effects;
 
+import net.fryc.imbleeding.ImBleeding;
 import net.fryc.imbleeding.entity.damage.BleedDamageSource;
-import net.fryc.imbleeding.gamerules.ModGameRules;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -14,7 +14,7 @@ public class BleedoutEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
-        if (!pLivingEntity.world.isClient() && pLivingEntity.world.getGameRules().getBoolean(ModGameRules.BLEEDOUT_KILLS)) {
+        if (!pLivingEntity.world.isClient() && ImBleeding.config.bleedoutKills) {
             if(pLivingEntity.getActiveStatusEffects().containsKey(ModEffects.BLEED_EFFECT) && pLivingEntity.getActiveStatusEffects().get(ModEffects.BLEEDOUT).getDuration() > 1800) pLivingEntity.damage(BleedDamageSource.bleed(), 200);
         }
 
