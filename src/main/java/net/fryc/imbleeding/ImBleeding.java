@@ -7,9 +7,9 @@ import net.fryc.imbleeding.config.ImbleedingConfig;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.items.ModItems;
 import net.minecraft.item.Item;
-import net.minecraft.tag.TagKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,7 @@ public class ImBleeding implements ModInitializer {
 		AutoConfig.register(ImbleedingConfig.class, GsonConfigSerializer::new);
 		config = AutoConfig.getConfigHolder(ImbleedingConfig.class).getConfig();
 
-		TULIPS = TagKey.of(Registry.ITEM_KEY, new Identifier(MOD_ID, "tulips"));
+		TULIPS = TagKey.of(RegistryKeys.ITEM, new Identifier(MOD_ID, "tulips"));
 
 		ModEffects.registerEffects();
 		ModItems.registerModItems();
