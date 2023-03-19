@@ -34,7 +34,7 @@ public class ModItems {
         ItemGroup HAEMORRHAGE = FabricItemGroup.builder(new Identifier(ImBleeding.MOD_ID, "haemorrhage_item_group"))
                 .displayName(Text.literal("Haemorrhage"))
                 .icon(() -> new ItemStack(ModItems.BANDAGE))
-                .entries((enabledFeatures, entries, operatorEnabled) -> {
+                .entries((enabledFeatures, entries) -> {
                     entries.add(ModItems.BANDAGE);
                     entries.add(ModItems.HONEY_BANDAGE);
                     entries.add(ModItems.STICKY_BANDAGE);

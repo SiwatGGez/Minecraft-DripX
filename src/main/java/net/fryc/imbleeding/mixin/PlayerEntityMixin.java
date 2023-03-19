@@ -11,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
+import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,9 +31,12 @@ abstract class PlayerEntityMixin extends LivingEntity {
         PlayerEntity player = ((PlayerEntity) (Object) this);
         if(player.getHealth() < 6 && ImBleeding.config.enableDarknessAtLowHp){
             if(player.hasStatusEffect(StatusEffects.DARKNESS)){
-                if(player.getActiveStatusEffects().get(StatusEffects.DARKNESS).getDuration() < 36) player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 35 , 0));
+                if(player.getActiveStatusEffects().get(StatusEffects.DARKNESS).getDuration() < 34){
+                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 33 , 0));
+                    player.getActiveStatusEffects().get(StatusEffects.DARKNESS).applyUpdateEffect(player);
+                }
             }
-            else player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 35 , 0));
+            else player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 33 , 0));
         }
         toughness = (int) (player.getAttributes().getValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS) * 1.4);
         if(toughness < 1) toughness = 1;
@@ -44,14 +48,14 @@ abstract class PlayerEntityMixin extends LivingEntity {
             }
 
         }
-        else if(!source.isProjectile() && source.getAttacker() instanceof SpiderEntity){
+        else if(!source.isIn(DamageTypeTags.IS_PROJECTILE) && source.getAttacker() instanceof SpiderEntity){
             int multiplier = 17 - player.getArmor();
             if(multiplier > 1){
                 if(!player.hasStatusEffect(ModEffects.HEALTH_LOSS) || !ImBleeding.config.enableMeleeEffectUpgrading) player.addStatusEffect(new StatusEffectInstance(ModEffects.HEALTH_LOSS, multiplier*ImBleeding.config.healthLossLength, 0), source.getAttacker());
                 else player.addStatusEffect(new StatusEffectInstance(ModEffects.HEALTH_LOSS, multiplier*(ImBleeding.config.healthLossLength + 80), 1), source.getAttacker());
             }
         }
-        else if(!source.isProjectile() && !source.isExplosive() && source.getAttacker() instanceof LivingEntity){
+        else if(!source.isIn(DamageTypeTags.IS_PROJECTILE) && !source.isIn(DamageTypeTags.IS_EXPLOSION) && source.getAttacker() instanceof LivingEntity){
             int multiplier = (int) (amount * ((21 - player.getArmor())- toughness));
             if(multiplier > 2){
                 if(!player.hasStatusEffect(ModEffects.BLEED_EFFECT) || !ImBleeding.config.enableMeleeEffectUpgrading) player.addStatusEffect(new StatusEffectInstance(ModEffects.BLEED_EFFECT, multiplier*ImBleeding.config.meleeBleedLength, 0), source.getAttacker());
@@ -59,7 +63,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
             }
         }
 
-        if(source.isFire() && ImBleeding.config.fireDamageLowersBleedingDuration){
+        if(source.isIn(DamageTypeTags.IS_FIRE) && ImBleeding.config.fireDamageLowersBleedingDuration){
             if(player.hasStatusEffect(ModEffects.BLEED_EFFECT)){
                 int amp = player.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getAmplifier();
                 int dur = player.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getDuration();
