@@ -6,16 +6,17 @@
   "name": "Haemorrhage",
   "description": "Makes player get Bleeding status effect after taking damage and adds bandages",
   "authors": [
-    "Wookash Fryc"
+    "Wookash Fryc",
+    "sheslong (artist)"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/haemorrhage",
-    "sources": "https://github.com/Xires87/BleedEffect",
-    "issues": "https://github.com/Xires87/BleedEffect/issues"
+    "sources": "https://github.com/Xires87/Haemorrhage",
+    "issues": "https://github.com/Xires87/Haemorrhage/issues"
   },
 
   "license": "MIT",
-  "icon": "assets/imbleeding/icon.png",
+  "icon": "assets/imbleeding/textures/mob_effect/bleed.png",
 
   "environment": "*",
   "entrypoints": {
