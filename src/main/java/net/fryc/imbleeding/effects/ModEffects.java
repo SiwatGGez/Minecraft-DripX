@@ -26,8 +26,10 @@ public class ModEffects {
 
 
     public static void registerEffects() {
-        BLEED_EFFECT = registerStatusEffect("bleed", bleed);
-        BLEEDOUT = registerStatusEffect("bleedout" , bleedout);
-        HEALTH_LOSS = registerStatusEffect("health_loss", healthloss);
+        if(BLEED_EFFECT == null){
+            BLEED_EFFECT = registerStatusEffect("bleed", bleed);
+            BLEEDOUT = registerStatusEffect("bleedout" , bleedout);
+            HEALTH_LOSS = registerStatusEffect("health_loss", healthloss);
+        }
     }
 }

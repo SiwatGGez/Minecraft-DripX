@@ -4,6 +4,7 @@
   "package": "net.fryc.imbleeding.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "LivingEntityMixin",
     "PlayerEntityMixin",
     "HoneyBottleMixin",
     "MilkBucketMixin"
