@@ -58,7 +58,7 @@ abstract class LivingEntityMixin extends Entity implements ClearEffects {
 
 
     //undead enemies cant get bleeding
-    @Inject(method = "canHaveStatusEffect(Lnet/minecraft/entity/effect/StatusEffectInstance;)Z", at = @At("HEAD"))
+    @Inject(method = "canHaveStatusEffect(Lnet/minecraft/entity/effect/StatusEffectInstance;)Z", at = @At("HEAD"), cancellable = true)
     private void injected(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> ret) {
         LivingEntity dys = ((LivingEntity)(Object)this);
         if(dys.getGroup() == EntityGroup.UNDEAD){
