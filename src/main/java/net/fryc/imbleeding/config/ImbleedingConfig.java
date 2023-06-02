@@ -27,17 +27,14 @@ public class ImbleedingConfig implements ConfigData {
 
     //length
     @ConfigEntry.Category("bleeding_length")
-    @ConfigEntry.BoundedDiscrete(max = 200)
-    public int meleeBleedLength = 11;
+    public int meleeBleedLength = 200;
 
     @ConfigEntry.Category("bleeding_length")
-    @ConfigEntry.BoundedDiscrete(max = 4000)
-    public int healthLossLength = 280;
+    public int healthLossLength = 1450;
 
 
     @ConfigEntry.Category("bleeding_length")
-    @ConfigEntry.BoundedDiscrete(max = 200)
-    public int arrowBleedLength = 7;
+    public int arrowBleedLength = 115;
 
 
     //visual

@@ -16,13 +16,13 @@ public class BleedEffect extends StatusEffect {
             if (!pLivingEntity.world.isClient()) {
 
                 if(pLivingEntity.getHealth() > 0.5F){
-                    pLivingEntity.damage(new BleedDamageSource(pLivingEntity.getDamageSources().magic().getTypeRegistryEntry()), 0.5F);
+                    pLivingEntity.damage(new BleedDamageSource(pLivingEntity.getDamageSources().starve().getTypeRegistryEntry()), 0.5F);
                 }
                 else if(!pLivingEntity.getActiveStatusEffects().containsKey(ModEffects.BLEEDOUT)){
-                    pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, 600, 0));
+                    pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, 600, 0, false, false, true));
                 }
                 else{
-                    pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, pLivingEntity.getActiveStatusEffects().get(ModEffects.BLEEDOUT).getDuration() + 1200, 0));
+                    pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, pLivingEntity.getActiveStatusEffects().get(ModEffects.BLEEDOUT).getDuration() + 1200, 0, false, false, true));
                 }
 
             }
