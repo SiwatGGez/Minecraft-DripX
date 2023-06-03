@@ -1,7 +1,6 @@
 package net.fryc.imbleeding.mixin;
 
 import net.fryc.imbleeding.effects.ModEffects;
-import net.fryc.imbleeding.util.ClearEffects;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EntityType;
@@ -20,7 +19,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 @Mixin(LivingEntity.class)
-abstract class LivingEntityMixin extends Entity implements ClearEffects {
+abstract class LivingEntityMixin extends Entity {
 
     @Shadow
     private @Final Map<StatusEffect, StatusEffectInstance> activeStatusEffects;
@@ -34,7 +33,7 @@ abstract class LivingEntityMixin extends Entity implements ClearEffects {
     protected void onStatusEffectRemoved(StatusEffectInstance effect) {
     }
 
-    //removes all status effects except bleeding and bleedout
+    //removes all status effects except bleeding and bleedout (unused)
     public boolean clearStatusEffectsExceptBleeding() {
         LivingEntity dys = ((LivingEntity)(Object)this);
         if (dys.world.isClient) {

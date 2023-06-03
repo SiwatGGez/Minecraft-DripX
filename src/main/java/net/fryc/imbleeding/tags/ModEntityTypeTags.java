@@ -1,5 +1,6 @@
 package net.fryc.imbleeding.tags;
 
+import net.fryc.imbleeding.ImBleeding;
 import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -15,6 +16,6 @@ public final class ModEntityTypeTags {
     }
 
     private static TagKey<EntityType<?>> register(String id) {
-        return TagKey.of(RegistryKeys.ENTITY_TYPE, new Identifier(id));
+        return TagKey.of(RegistryKeys.ENTITY_TYPE, new Identifier(ImBleeding.MOD_ID, id));
     }
 }

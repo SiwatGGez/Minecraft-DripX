@@ -22,11 +22,24 @@
   "text.autoconfig.imbleeding.option.bleedingStopsFoodHealing": "Krwawienie zatrzymuje leczenie z jedzenia",
   "text.autoconfig.imbleeding.option.fireDamageLowersBleedingDuration": "Obrażenia od ognia zmniejszają długość krwawienia",
   "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading": "Ataki wręcz ulepszają krwawienie (lub utratę zdrowia, kiedy atakuje pająk)",
-  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading.@Tooltip": "Kiedy gracz ma Krwawienie I i otrzyma obrażenia od ataku wręcz, dostanie Krwawienie II, które dodatkowo będzie trwało dłużej",
+  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading.@Tooltip": "Kiedy gracz ma Krwawienie I i otrzyma obrażenia od ataku wręcz, istnieje szansa, że dostanie Krwawienie II",
   "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading": "Strzały ulepszają krwawienie",
-  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading.@Tooltip": "Kiedy gracz ma Krwawienie I i otrzyma obrażenia od strzały, dostanie Krwawienie II, które dodatkowo będzie trwało dłużej",
+  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading.@Tooltip": "Kiedy gracz ma Krwawienie I i otrzyma obrażenia od strzały, istnieje szansa, że dostanie Krwawienie II",
 
   "text.autoconfig.imbleeding.option.meleeBleedLength": "Długość krwawienia od ataków wręcz",
+  "text.autoconfig.imbleeding.option.meleeBleedLength.@Tooltip": "20 = 1s. Ta wartość jest mnożona przez otrzymane obrażenia",
   "text.autoconfig.imbleeding.option.arrowBleedLength": "Długość krwawienia od strzał",
-  "text.autoconfig.imbleeding.option.healthLossLength": "Długość utraty zdrowia od ataków pająków"
+  "text.autoconfig.imbleeding.option.arrowBleedLength.@Tooltip": "20 = 1s. Ta wartość jest mnożona przez otrzymane obrażenia",
+  "text.autoconfig.imbleeding.option.healthLossLength": "Długość utraty zdrowia od ataków pająków",
+  "text.autoconfig.imbleeding.option.healthLossLength.@Tooltip": "20 = 1s. Ta wartość jest mnożona przez otrzymane obrażenia",
+  "text.autoconfig.imbleeding.option.bleedoutLength": "Długość wykrwawienia",
+  "text.autoconfig.imbleeding.option.bleedoutLength.@Tooltip": "20 = 1s. Ta wartość jest dzielona przez 2 kiedy gracz dostaje Wykrwawienie po raz pierwszy. Nie wpływa na to jak szybko Wykrwawienie zabija",
+
+  "text.autoconfig.imbleeding.option.chanceToLowerBleedingAmplifierWithFire": "Szansa na osłabienie krwawienia ogniem (%)",
+
+  "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss": "Podstawowa szansa na ulepszenie krwawienia lub utraty zdrowia (%)",
+  "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss.@Tooltip": "Ta wartość jest mnożona przez otrzymane obrażenia. Podstawowa szansa na zyskanie Krwawienia (lub Utraty Zdrowia) III to: taWartość/10 + 1",
+
+  "text.autoconfig.imbleeding.option.armorBleedingProtection": "Redukcja krwawienia na punkt pancerza (%)",
+  "text.autoconfig.imbleeding.option.toughnessBleedingProtection": "Redukcja krwawienia na punkt wytrzymałości (Armor toughness) (%)"
 }

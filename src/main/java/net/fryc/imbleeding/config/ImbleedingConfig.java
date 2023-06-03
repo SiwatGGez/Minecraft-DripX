@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "imbleeding")
 public class ImbleedingConfig implements ConfigData {
 
-    //booleans
+
     @ConfigEntry.Category("bleeding")
     public boolean bleedoutKills = true;
 
@@ -18,6 +18,9 @@ public class ImbleedingConfig implements ConfigData {
     public boolean fireDamageLowersBleedingDuration = true;
 
     @ConfigEntry.Category("bleeding")
+    public int chanceToLowerBleedingAmplifierWithFire = 28;
+
+    @ConfigEntry.Category("bleeding")
     @ConfigEntry.Gui.Tooltip
     public boolean enableMeleeEffectUpgrading = true;
 
@@ -25,16 +28,31 @@ public class ImbleedingConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean enableArrowEffectUpgrading = false;
 
+    @ConfigEntry.Category("bleeding")
+    @ConfigEntry.Gui.Tooltip
+    public int baseChanceToUpgradeBleedingOrHealthLoss = 7;
+
     //length
     @ConfigEntry.Category("bleeding_length")
+    @ConfigEntry.Gui.Tooltip
     public int meleeBleedLength = 200;
 
     @ConfigEntry.Category("bleeding_length")
+    @ConfigEntry.Gui.Tooltip
     public int healthLossLength = 1450;
 
+    @ConfigEntry.Category("bleeding_length")
+    @ConfigEntry.Gui.Tooltip
+    public int arrowBleedLength = 115;
 
     @ConfigEntry.Category("bleeding_length")
-    public int arrowBleedLength = 115;
+    @ConfigEntry.Gui.Tooltip
+    public int bleedoutLength = 1200;
+
+    @ConfigEntry.Category("bleeding_length")
+    public float armorBleedingProtection = 3;
+    @ConfigEntry.Category("bleeding_length")
+    public float toughnessBleedingProtection = 4;
 
 
     //visual

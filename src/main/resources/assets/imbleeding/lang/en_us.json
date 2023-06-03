@@ -22,11 +22,24 @@
   "text.autoconfig.imbleeding.option.bleedingStopsFoodHealing": "Bleeding stops food healing",
   "text.autoconfig.imbleeding.option.fireDamageLowersBleedingDuration": "Fire damage lowers duration of bleeding",
   "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading": "Melee attacks upgrade bleeding (or health loss, when attacked by spider)",
-  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading.@Tooltip": "While having Bleeding I, player will get Bleeding II with increased duration after getting damage from melee attack",
+  "text.autoconfig.imbleeding.option.enableMeleeEffectUpgrading.@Tooltip": "While having Bleeding I, there is a chance that player will get Bleeding II after getting damage from melee attack",
   "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading": "Arrows upgrade bleeding",
-  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading.@Tooltip": "While having Bleeding I, player will get Bleeding II with increased duration after getting damage from arrow",
+  "text.autoconfig.imbleeding.option.enableArrowEffectUpgrading.@Tooltip": "While having Bleeding I, there is a chance that player will get Bleeding II after getting damage from arrow",
 
   "text.autoconfig.imbleeding.option.meleeBleedLength": "Length of bleeding from melee attacks",
+  "text.autoconfig.imbleeding.option.meleeBleedLength.@Tooltip": "20 = 1s. This value is multiplied by damage taken",
   "text.autoconfig.imbleeding.option.arrowBleedLength": "Length of bleeding from arrows",
-  "text.autoconfig.imbleeding.option.healthLossLength": "Length of health loss from spider attacks"
+  "text.autoconfig.imbleeding.option.arrowBleedLength.@Tooltip": "20 = 1s. This value is multiplied by damage taken",
+  "text.autoconfig.imbleeding.option.healthLossLength": "Length of health loss from spider attacks",
+  "text.autoconfig.imbleeding.option.healthLossLength.@Tooltip": "20 = 1s. This value is multiplied by damage taken",
+  "text.autoconfig.imbleeding.option.bleedoutLength": "Length of bleedout",
+  "text.autoconfig.imbleeding.option.bleedoutLength.@Tooltip": "20 = 1s. This value is divided by 2 the first time player gets Bleedout. Doesn't affect how quickly player dies from Bleedout",
+
+  "text.autoconfig.imbleeding.option.chanceToLowerBleedingAmplifierWithFire": "Chance to lower bleeding amplifier with fire (%)",
+
+  "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss": "Base chance to upgrade bleeding or health loss (%)",
+  "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss.@Tooltip": "This chance is multiplied by damage taken. Base chance for getting Bleeding (or Health Loss) III is: thisValue/10 + 1",
+
+  "text.autoconfig.imbleeding.option.armorBleedingProtection": "Bleeding reduction per armor point (%)",
+  "text.autoconfig.imbleeding.option.toughnessBleedingProtection": "Bleeding reduction per toughness point (%)"
 }
