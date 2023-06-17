@@ -14,7 +14,7 @@ public class BleedEffect extends StatusEffect {
 
         @Override
         public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
-            if (!pLivingEntity.world.isClient()) {
+            if (!pLivingEntity.getWorld().isClient()) {
 
                 if(pLivingEntity.getHealth() > 0.5F){
                     pLivingEntity.damage(new BleedDamageSource(pLivingEntity.getDamageSources().starve().getTypeRegistryEntry()), 0.5F);

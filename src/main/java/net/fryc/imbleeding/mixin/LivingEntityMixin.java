@@ -36,7 +36,7 @@ abstract class LivingEntityMixin extends Entity {
     //removes all status effects except bleeding and bleedout (unused)
     public boolean clearStatusEffectsExceptBleeding() {
         LivingEntity dys = ((LivingEntity)(Object)this);
-        if (dys.world.isClient) {
+        if (dys.getWorld().isClient) {
             return false;
         } else {
             Iterator<StatusEffectInstance> iterator = this.activeStatusEffects.values().iterator();

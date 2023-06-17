@@ -97,7 +97,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
                 else{
                     bleedingUpgradeChance = (int)((1+(ImBleeding.config.baseChanceToUpgradeBleedingOrHealthLoss/10)) * (amount + 1));
                 }
-                if(!world.isClient() && amp < 3 && checkIfBleedingCanBeUpgraded(source)){
+                if(!player.getWorld().isClient() && amp < 3 && checkIfBleedingCanBeUpgraded(source)){
                     if(random.nextInt(100) >= 100 - bleedingUpgradeChance){
                         amp++;
                     }
@@ -123,7 +123,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
                 if(amp == 0) dur -= 280;
                 else if(amp == 1) dur -= 120;
                 else dur -= 50;
-                if(!world.isClient && amp > 0){
+                if(!player.getWorld().isClient && amp > 0){
                     if(random.nextInt(100) >= 100 - ImBleeding.config.chanceToLowerBleedingAmplifierWithFire){
                         amp--;
                     }

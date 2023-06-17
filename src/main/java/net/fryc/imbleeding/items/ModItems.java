@@ -11,10 +11,15 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+
+    //Item Group
+    public static final RegistryKey<ItemGroup> HAEMORRHAGE = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(ImBleeding.MOD_ID, "haemorrhage_item_group"));
 
     public static final Item BANDAGE = registerItem("bandage" ,
             new BandageItem(new FabricItemSettings().maxCount(16)));
@@ -30,16 +35,17 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(ImBleeding.MOD_ID, name), item);
     }
     public static void registerModItems(){
-        ImBleeding.LOGGER.info("Registering Mod Items for " + ImBleeding.MOD_ID);
-        ItemGroup HAEMORRHAGE = FabricItemGroup.builder(new Identifier(ImBleeding.MOD_ID, "haemorrhage_item_group"))
-                .displayName(Text.literal("Haemorrhage"))
+        //Item Group
+        Registry.register(Registries.ITEM_GROUP, HAEMORRHAGE, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(ModItems.BANDAGE))
+                .displayName(Text.literal("Haemorrhage"))
                 .entries((enabledFeatures, entries) -> {
                     entries.add(ModItems.BANDAGE);
                     entries.add(ModItems.HONEY_BANDAGE);
                     entries.add(ModItems.STICKY_BANDAGE);
                     entries.add(ModItems.HERBAL_BALM);
                 })
-                .build();
+                .build());
+
     }
 }
