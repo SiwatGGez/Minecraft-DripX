@@ -16,7 +16,6 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class BandageItem extends Item {
-    private static final int MAX_USE_TIME = 40;
     public BandageItem(Settings settings) {
         super(settings);
     }
@@ -38,7 +37,7 @@ public class BandageItem extends Item {
     }
 
     public int getMaxUseTime(ItemStack stack) {
-        return 40;
+        return stack.getItem() == ModItems.STICKY_BANDAGE ? 15 : 40;
     }
 
     public UseAction getUseAction(ItemStack stack) {

@@ -40,7 +40,6 @@ abstract class PlayerEntityMixin extends LivingEntity {
             if(player.hasStatusEffect(StatusEffects.DARKNESS)){
                 if(player.getActiveStatusEffects().get(StatusEffects.DARKNESS).getDuration() < 34){
                     player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 33 , 0, false, false, false));
-                    player.getActiveStatusEffects().get(StatusEffects.DARKNESS).applyUpdateEffect(player);
                 }
             }
             else player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 33 , 0, false, false, false));
