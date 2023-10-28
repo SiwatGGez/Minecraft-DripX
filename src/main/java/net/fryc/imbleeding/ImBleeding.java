@@ -4,13 +4,10 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fryc.imbleeding.config.ImbleedingConfig;
-import net.fryc.imbleeding.damage.BleedDamageSource;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.items.ModItems;
-import net.minecraft.entity.damage.*;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -19,9 +16,6 @@ import org.slf4j.LoggerFactory;
 public class ImBleeding implements ModInitializer {
 	public static final String MOD_ID = "imbleeding";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-	static final DamageType bleed = new DamageType("bleed", DamageScaling.NEVER, 0.0f, DamageEffects.HURT, DeathMessageType.DEFAULT);
-	public static final DamageSource bleeding = new BleedDamageSource(RegistryEntry.of(bleed));
 
 	public static TagKey<Item> TULIPS;
 	public static ImbleedingConfig config;

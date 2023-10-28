@@ -8,6 +8,8 @@
   "item.imbleeding.sticky_bandage": "Sticky Bandage",
   "item.imbleeding.herbal_balm": "Herbal Balm",
 
+  "death.attack.bleed": "%1$s bled out",
+
   "text.autoconfig.imbleeding.title": "Haemorrhage Config",
   "text.autoconfig.imbleeding.category.bleeding": "Bleeding",
   "text.autoconfig.imbleeding.category.bleeding_length": "Effects Length",

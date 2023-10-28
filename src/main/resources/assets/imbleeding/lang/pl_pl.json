@@ -4,6 +4,8 @@
   "item.imbleeding.sticky_bandage": "Lepki Bandaż",
   "item.imbleeding.herbal_balm": "Ziołowy Balsam",
 
+  "death.attack.bleed": "%1$s wykrwawił się",
+
   "effect.imbleeding.bleed": "Krwawienie",
   "effect.imbleeding.bleedout": "Wykrwawienie",
   "effect.imbleeding.health_loss": "Utrata Zdrowia",

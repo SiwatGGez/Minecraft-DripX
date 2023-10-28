@@ -15,7 +15,6 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.DamageTypeTags;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -29,7 +28,6 @@ abstract class PlayerEntityMixin extends LivingEntity {
         super(entityType, world);
     }
 
-    Random random = Random.create();
     //Causes player to bleed after taking damage and gives darkness at low hp
     @Inject(method = "applyDamage(Lnet/minecraft/entity/damage/DamageSource;F)V", at = @At("TAIL"))
     public void applyDamageEffects(DamageSource source, float amount, CallbackInfo ci) {
@@ -97,7 +95,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
                     bleedingUpgradeChance = (int)((1+(ImBleeding.config.baseChanceToUpgradeBleedingOrHealthLoss/10)) * (amount + 1));
                 }
                 if(!player.getWorld().isClient() && amp < 3 && checkIfBleedingCanBeUpgraded(source)){
-                    if(random.nextInt(100) >= 100 - bleedingUpgradeChance){
+                    if(player.getRandom().nextInt(100) >= 100 - bleedingUpgradeChance){
                         amp++;
                     }
                 }
@@ -122,8 +120,8 @@ abstract class PlayerEntityMixin extends LivingEntity {
                 if(amp == 0) dur -= 280;
                 else if(amp == 1) dur -= 120;
                 else dur -= 50;
-                if(!player.getWorld().isClient && amp > 0){
-                    if(random.nextInt(100) >= 100 - ImBleeding.config.chanceToLowerBleedingAmplifierWithFire){
+                if(!player.getWorld().isClient() && amp > 0){
+                    if(player.getRandom().nextInt(100) >= 100 - ImBleeding.config.chanceToLowerBleedingAmplifierWithFire){
                         amp--;
                     }
                 }

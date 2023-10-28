@@ -1,42 +1,36 @@
 package net.fryc.imbleeding.mixin;
 
 import net.fryc.imbleeding.effects.ModEffects;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityGroup;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.util.Iterator;
-import java.util.Map;
-
 @Mixin(LivingEntity.class)
-abstract class LivingEntityMixin extends Entity {
+abstract class LivingEntityMixin extends Entity implements Attackable {
 
-    @Shadow
-    private @Final Map<StatusEffect, StatusEffectInstance> activeStatusEffects;
+
+
+    //@Shadow
+    //private @Final Map<StatusEffect, StatusEffectInstance> activeStatusEffects;
 
 
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
 
-    @Shadow
-    protected void onStatusEffectRemoved(StatusEffectInstance effect) {
-    }
+    //@Shadow
+    //protected void onStatusEffectRemoved(StatusEffectInstance effect) {
+    //}
 
     //removes all status effects except bleeding and bleedout (unused)
+    /*
     public boolean clearStatusEffectsExceptBleeding() {
         LivingEntity dys = ((LivingEntity)(Object)this);
-        if (dys.getWorld().isClient) {
+        if (dys.getWorld().isClient()) {
             return false;
         } else {
             Iterator<StatusEffectInstance> iterator = this.activeStatusEffects.values().iterator();
@@ -54,6 +48,8 @@ abstract class LivingEntityMixin extends Entity {
             return bl;
         }
     }
+
+     */
 
 
     //undead enemies cant get bleeding

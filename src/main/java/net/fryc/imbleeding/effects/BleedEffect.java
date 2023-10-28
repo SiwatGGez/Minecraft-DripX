@@ -1,7 +1,7 @@
 package net.fryc.imbleeding.effects;
 
 import net.fryc.imbleeding.ImBleeding;
-import net.fryc.imbleeding.damage.BleedDamageSource;
+import net.fryc.imbleeding.damage.ModDamageTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
@@ -17,7 +17,7 @@ public class BleedEffect extends StatusEffect {
             if (!pLivingEntity.getWorld().isClient()) {
 
                 if(pLivingEntity.getHealth() > 0.5F){
-                    pLivingEntity.damage(new BleedDamageSource(pLivingEntity.getDamageSources().starve().getTypeRegistryEntry()), 0.5F);
+                    pLivingEntity.damage(ModDamageTypes.of(pLivingEntity.getWorld(), ModDamageTypes.BLEEDING_DAMAGE), 0.5F);
                 }
                 else if(!pLivingEntity.getActiveStatusEffects().containsKey(ModEffects.BLEEDOUT)){
                     pLivingEntity.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, ImBleeding.config.bleedoutLength/2, 0, false, false, true));
