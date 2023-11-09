@@ -44,11 +44,11 @@ abstract class MilkBucketMixin extends Item {
     @Inject(method = "finishUsing(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/item/ItemStack;", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;clearStatusEffects()Z", shift = At.Shift.AFTER))
     private void applyBleed(ItemStack stack, World world, LivingEntity user , CallbackInfoReturnable<Object> info) {
         if(bl){
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.BLEED_EFFECT, dur, ampl));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.BLEED_EFFECT, dur, ampl, false, false, true));
             bl = false;
         }
         if(bli){
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, duri, ampli));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.BLEEDOUT, duri, ampli, false, false, true));
             bli = false;
         }
     }

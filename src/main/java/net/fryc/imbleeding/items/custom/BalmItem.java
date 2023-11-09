@@ -25,14 +25,14 @@ public class BalmItem extends Item {
             int dur = (int)(user.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getDuration() * 0.8F);
             if(amp > 0) amp = 0;
             user.removeStatusEffect(user.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getEffectType());
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.BLEED_EFFECT, dur, amp));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.BLEED_EFFECT, dur, amp, false, false, true));
         }
         if(user.hasStatusEffect(ModEffects.HEALTH_LOSS)){
             int amp = user.getActiveStatusEffects().get(ModEffects.HEALTH_LOSS).getAmplifier();
             int dur = (int)(user.getActiveStatusEffects().get(ModEffects.HEALTH_LOSS).getDuration() * 0.5F);
             if(amp > 0) amp = 0;
             user.removeStatusEffect(user.getActiveStatusEffects().get(ModEffects.HEALTH_LOSS).getEffectType());
-            user.addStatusEffect(new StatusEffectInstance(ModEffects.HEALTH_LOSS, dur, amp));
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.HEALTH_LOSS, dur, amp, false, false, true));
         }
         ItemStack itemStack = super.finishUsing(stack, world, user);
         return user instanceof PlayerEntity && ((PlayerEntity)user).getAbilities().creativeMode ? itemStack : new ItemStack(Items.BOWL);
