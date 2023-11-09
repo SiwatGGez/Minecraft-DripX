@@ -4,14 +4,12 @@ import net.fryc.imbleeding.ImBleeding;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.tags.ModDamageTypeTags;
 import net.fryc.imbleeding.tags.ModEntityTypeTags;
+import net.fryc.imbleeding.util.BleedingHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.SpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.tag.DamageTypeTags;
@@ -34,14 +32,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
         PlayerEntity player = ((PlayerEntity) (Object) this);
 
         //applying darkness
-        if(player.getHealth() < 6 && ImBleeding.config.enableDarknessAtLowHp){
-            if(player.hasStatusEffect(StatusEffects.DARKNESS)){
-                if(player.getActiveStatusEffects().get(StatusEffects.DARKNESS).getDuration() < 34){
-                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 33 , 0, false, false, false));
-                }
-            }
-            else player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 33 , 0, false, false, false));
-        }
+        BleedingHelper.applyDarknessToPlayer(player);
 
         float toughness = (int) (player.getAttributes().getValue(EntityAttributes.GENERIC_ARMOR_TOUGHNESS));
         int armor = (int) (player.getAttributes().getValue(EntityAttributes.GENERIC_ARMOR));
@@ -75,61 +66,14 @@ abstract class PlayerEntityMixin extends LivingEntity {
             duration -= duration * reduction;
         }
 
-
         //applying bleeding or health loss
         if(duration > 19){
-            StatusEffect effect;
-            if(!healthLoss) effect = ModEffects.BLEED_EFFECT;
-            else effect = ModEffects.HEALTH_LOSS;
-
-            if(!player.hasStatusEffect(effect)){
-                player.addStatusEffect(new StatusEffectInstance(effect, duration, 0, false, healthLoss, true));
-            }
-            else{
-                int amp = player.getActiveStatusEffects().get(effect).getAmplifier();
-                int bleedingUpgradeChance;
-                if(amp == 0){
-                    bleedingUpgradeChance = (int)(ImBleeding.config.baseChanceToUpgradeBleedingOrHealthLoss * (amount + 1));
-                }
-                else{
-                    bleedingUpgradeChance = (int)((1+(ImBleeding.config.baseChanceToUpgradeBleedingOrHealthLoss/10)) * (amount + 1));
-                }
-                if(!player.getWorld().isClient() && amp < 3 && checkIfBleedingCanBeUpgraded(source)){
-                    if(player.getRandom().nextInt(100) >= 100 - bleedingUpgradeChance){
-                        amp++;
-                    }
-                }
-                if(player.getActiveStatusEffects().get(effect).getDuration() > duration){
-                    duration -= duration * 0.75;
-                }
-                else{
-                    duration -= player.getActiveStatusEffects().get(effect).getDuration() * 0.75;
-                }
-                duration += player.getActiveStatusEffects().get(effect).getDuration();
-
-                player.addStatusEffect(new StatusEffectInstance(effect, duration, amp, false, healthLoss, true));
-            }
+            BleedingHelper.applyBleedingOrHealthLoss(player, duration, healthLoss, source, amount);
         }
-
 
         //reducing bleeding duration (fire damage)
         if(source.isIn(DamageTypeTags.IS_FIRE) && ImBleeding.config.fireDamageLowersBleedingDuration){
-            if(player.hasStatusEffect(ModEffects.BLEED_EFFECT)){
-                int amp = player.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getAmplifier();
-                int dur = player.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getDuration();
-                if(amp == 0) dur -= 280;
-                else if(amp == 1) dur -= 120;
-                else dur -= 50;
-                if(!player.getWorld().isClient() && amp > 0){
-                    if(player.getRandom().nextInt(100) >= 100 - ImBleeding.config.chanceToLowerBleedingAmplifierWithFire){
-                        amp--;
-                    }
-                }
-                player.removeStatusEffect(player.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getEffectType());
-                if(dur > 0){
-                    player.addStatusEffect(new StatusEffectInstance(ModEffects.BLEED_EFFECT, dur, amp, false, false, true));
-                }
-            }
+            BleedingHelper.reduceBleedingWithFire(player);
         }
 
     }
@@ -148,17 +92,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
     @Inject(method = "tick()V", at = @At("TAIL"))
     public void setBlindness(CallbackInfo info){
         PlayerEntity player = ((PlayerEntity) (Object) this);
-        if(player.getHealth()<=1 && ImBleeding.config.enableBlindnessAtLowHp){
-            if(player.hasStatusEffect(StatusEffects.BLINDNESS)){
-                if(player.getActiveStatusEffects().get(StatusEffects.BLINDNESS).getDuration() < 25) player.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 60 , 0, false, false, false));
-            }
-            else player.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 60 , 0, false, false, false));
-        }
-    }
-
-    private static boolean checkIfBleedingCanBeUpgraded(DamageSource source){
-        if(source.isIn(DamageTypeTags.IS_PROJECTILE)) return ImBleeding.config.enableArrowEffectUpgrading;
-        return ImBleeding.config.enableMeleeEffectUpgrading;
+        BleedingHelper.applyBlindnessToPlayer(player);
     }
 
 }
