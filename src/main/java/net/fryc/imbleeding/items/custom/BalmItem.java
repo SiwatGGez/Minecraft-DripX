@@ -19,7 +19,7 @@ public class BalmItem extends Item {
     }
 
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        user.heal(1.0F);
+        user.heal(3.0F);
         if(user.hasStatusEffect(ModEffects.BLEED_EFFECT)){
             int amp = user.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getAmplifier();
             int dur = (int)(user.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getDuration() * 0.8F);

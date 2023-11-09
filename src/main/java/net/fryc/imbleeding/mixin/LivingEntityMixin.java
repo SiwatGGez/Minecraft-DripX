@@ -13,43 +13,10 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 abstract class LivingEntityMixin extends Entity implements Attackable {
 
 
-
-    //@Shadow
-    //private @Final Map<StatusEffect, StatusEffectInstance> activeStatusEffects;
-
-
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
 
-    //@Shadow
-    //protected void onStatusEffectRemoved(StatusEffectInstance effect) {
-    //}
-
-    //removes all status effects except bleeding and bleedout (unused)
-    /*
-    public boolean clearStatusEffectsExceptBleeding() {
-        LivingEntity dys = ((LivingEntity)(Object)this);
-        if (dys.getWorld().isClient()) {
-            return false;
-        } else {
-            Iterator<StatusEffectInstance> iterator = this.activeStatusEffects.values().iterator();
-
-            boolean bl;
-            StatusEffectInstance instance;
-            for(bl = false; iterator.hasNext(); bl = true) {
-                instance = iterator.next();
-                if(instance.getEffectType() != ModEffects.BLEED_EFFECT && instance.getEffectType() != ModEffects.BLEEDOUT){
-                    this.onStatusEffectRemoved(instance);
-                    iterator.remove();
-                }
-            }
-
-            return bl;
-        }
-    }
-
-     */
 
 
     //undead enemies cant get bleeding

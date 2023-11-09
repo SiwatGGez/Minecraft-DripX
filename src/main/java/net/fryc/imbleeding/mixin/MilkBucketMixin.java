@@ -19,14 +19,6 @@ abstract class MilkBucketMixin extends Item {
     }
 
 
-    /* incompatible with some mods
-    @Redirect(method = "finishUsing(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/item/ItemStack;", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;clearStatusEffects()Z"))
-    private boolean dontRemoveBleeding(LivingEntity user, ItemStack stack, World world) {
-        return ((ClearEffects) user).clearStatusEffectsExceptBleeding();
-    }
-
-     */
-
     //Prevents milk from removing bleed and bleedout
     boolean bl = false, bli = false;
     int dur, duri;

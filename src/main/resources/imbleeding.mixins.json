@@ -7,10 +7,10 @@
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "HoneyBottleMixin",
-    "MilkBucketMixin",
-    "LivingEntityRendererMixin"
+    "MilkBucketMixin"
   ],
   "client": [
+    "LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

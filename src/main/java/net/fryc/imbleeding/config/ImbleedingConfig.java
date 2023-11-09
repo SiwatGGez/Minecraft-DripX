@@ -9,6 +9,12 @@ public class ImbleedingConfig implements ConfigData {
 
 
     @ConfigEntry.Category("bleeding")
+    public float bleedingDamage = 0.5F;
+
+    @ConfigEntry.Category("bleeding")
+    @ConfigEntry.Gui.Tooltip
+    public int bleedingDamageFrequency = 120;
+    @ConfigEntry.Category("bleeding")
     public boolean bleedoutKills = true;
 
     @ConfigEntry.Category("bleeding")

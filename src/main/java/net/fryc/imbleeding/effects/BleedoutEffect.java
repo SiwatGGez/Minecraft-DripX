@@ -25,7 +25,7 @@ public class BleedoutEffect extends StatusEffect {
     public boolean canApplyUpdateEffect(int pDuration, int pAmplifier) {
         int i;
         if (this == ModEffects.BLEEDOUT) {
-            i = 25 >> pAmplifier;
+            i = 60 >> pAmplifier;
             if (i > 0) {
                 return pDuration % i == 0;
             } else {

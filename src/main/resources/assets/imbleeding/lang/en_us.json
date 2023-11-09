@@ -43,5 +43,9 @@
   "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss.@Tooltip": "This chance is multiplied by damage taken. Base chance for getting Bleeding (or Health Loss) III is: thisValue/10 + 1",
 
   "text.autoconfig.imbleeding.option.armorBleedingProtection": "Bleeding reduction per armor point (%)",
-  "text.autoconfig.imbleeding.option.toughnessBleedingProtection": "Bleeding reduction per toughness point (%)"
+  "text.autoconfig.imbleeding.option.toughnessBleedingProtection": "Bleeding reduction per toughness point (%)",
+
+  "text.autoconfig.imbleeding.option.bleedingDamage": "Damage dealt by bleeding",
+  "text.autoconfig.imbleeding.option.bleedingDamageFrequency": "Frequency of dealing damage by bleeding",
+  "text.autoconfig.imbleeding.option.bleedingDamageFrequency.@Tooltip": "20 = 1s. The higher this value, the more time it takes to bleed out"
 }
