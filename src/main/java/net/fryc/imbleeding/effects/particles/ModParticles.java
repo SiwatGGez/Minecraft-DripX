@@ -12,12 +12,15 @@ import net.minecraft.util.Identifier;
 public class ModParticles {
 
     public static DefaultParticleType BLOOD_PARTICLE;
+    public static DefaultParticleType BLOOD_PARTICLE_LAND;
     private static final DefaultParticleType blood_particle = FabricParticleTypes.simple();
+    private static final DefaultParticleType blood_particle_land = FabricParticleTypes.simple();
 
 
     public static void registerModParticles(){
         if(BLOOD_PARTICLE == null){
             BLOOD_PARTICLE = (DefaultParticleType) registerParticleType(new Identifier(ImBleeding.MOD_ID, "blood"), blood_particle);
+            BLOOD_PARTICLE_LAND = (DefaultParticleType) registerParticleType(new Identifier(ImBleeding.MOD_ID, "blood_land"), blood_particle_land);
         }
     }
 

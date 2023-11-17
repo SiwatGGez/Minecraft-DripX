@@ -5,7 +5,6 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
-import net.minecraft.util.math.BlockPos;
 
 @Environment(EnvType.CLIENT)
 public class BloodParticle extends SpriteBillboardParticle {
@@ -24,9 +23,10 @@ public class BloodParticle extends SpriteBillboardParticle {
         this.prevPosX = this.x;
         this.prevPosY = this.y;
         this.prevPosZ = this.z;
-        if (this.age++ >= this.maxAge) {
+        if (this.age++ >= this.maxAge || this.onGround) {
+            this.world.addParticle(ModParticles.BLOOD_PARTICLE_LAND, this.x, this.y, this.z, this.velocityX, this.velocityY, this.velocityZ);
             this.markDead();
-        } else if(this.world.getBlockState(BlockPos.ofFloored(this.x, this.y, this.z)).isReplaceable()){
+        } else {
             this.velocityY -= 0.04 * (double)this.gravityStrength;
             this.move(this.velocityX, this.velocityY, this.velocityZ);
             if (this.ascending && this.y == this.prevPosY) {
@@ -57,15 +57,11 @@ public class BloodParticle extends SpriteBillboardParticle {
             BloodParticle bloodParticle = new BloodParticle(clientWorld, d, e, f, g, h, i);
             bloodParticle.setSprite(this.spriteProvider);
             bloodParticle.velocityX = 0;
-            bloodParticle.velocityY = 0;
             bloodParticle.velocityZ = 0;
-            bloodParticle.gravityStrength = 1.5F;
-            bloodParticle.maxAge = 300;
-            bloodParticle.setColor(1.0f, 0.1f, 0.1f);
+            bloodParticle.gravityStrength = 1.4F;
+            bloodParticle.maxAge = 280;
+            bloodParticle.setColor(1.0f, 0.075f, 0.075f);
             return bloodParticle;
         }
     }
-
-
-
 }

@@ -21,7 +21,7 @@ abstract class LivingEntityMixin extends Entity implements Attackable {
 
     //undead enemies cant get bleeding
     @Inject(method = "canHaveStatusEffect(Lnet/minecraft/entity/effect/StatusEffectInstance;)Z", at = @At("HEAD"), cancellable = true)
-    private void injected(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> ret) {
+    private void undeadCantBleed(StatusEffectInstance effect, CallbackInfoReturnable<Boolean> ret) {
         LivingEntity dys = ((LivingEntity)(Object)this);
         if(dys.getGroup() == EntityGroup.UNDEAD){
             if(effect.getEffectType() == ModEffects.BLEED_EFFECT || effect.getEffectType() == ModEffects.BLEEDOUT){

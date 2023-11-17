@@ -10,7 +10,8 @@
     "MilkBucketMixin"
   ],
   "client": [
-    "LivingEntityRendererMixin"
+    "LivingEntityRendererMixin",
+    "ClientPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
