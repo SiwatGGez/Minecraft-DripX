@@ -5,6 +5,7 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fryc.imbleeding.config.ImbleedingConfig;
 import net.fryc.imbleeding.effects.ModEffects;
+import net.fryc.imbleeding.effects.particles.ModParticles;
 import net.fryc.imbleeding.items.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
@@ -29,6 +30,7 @@ public class ImBleeding implements ModInitializer {
 
 		ModEffects.registerEffects();
 		ModItems.registerModItems();
+		ModParticles.registerModParticles();
 
 	}
 }
