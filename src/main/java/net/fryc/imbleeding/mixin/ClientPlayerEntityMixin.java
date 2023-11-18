@@ -28,7 +28,7 @@ abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity {
     private void spawnBloodParticles(CallbackInfo info) {
         LivingEntity dys = ((LivingEntity)(Object)this);
         if(dys.hasStatusEffect(ModEffects.BLEED_EFFECT)){
-            if(dys.getRandom().nextInt(100) < 5 + dys.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getAmplifier()*3){
+            if(dys.getRandom().nextInt(100) < 5 + dys.getActiveStatusEffects().get(ModEffects.BLEED_EFFECT).getAmplifier()*5){
                 Vec3d vec3d = dys.getVelocity();
                 PacketByteBuf buf = PacketByteBufs.create();
                 buf.writeChunkPos(dys.getChunkPos());
