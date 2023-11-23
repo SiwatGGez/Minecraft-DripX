@@ -7,7 +7,7 @@
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "HoneyBottleMixin",
-    "MilkBucketMixin"
+    "HealthFlaskItemMixin"
   ],
   "client": [
     "LivingEntityRendererMixin",

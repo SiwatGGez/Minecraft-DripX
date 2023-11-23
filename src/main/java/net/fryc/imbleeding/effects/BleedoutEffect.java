@@ -34,4 +34,8 @@ public class BleedoutEffect extends StatusEffect {
         }
         else return true;
     }
+
+    public boolean isUnremovable() {
+        return true;
+    }
 }
