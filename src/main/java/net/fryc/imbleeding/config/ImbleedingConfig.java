@@ -49,7 +49,7 @@ public class ImbleedingConfig implements ConfigData {
 
     @ConfigEntry.Category("bleeding_length")
     @ConfigEntry.Gui.Tooltip
-    public int arrowBleedLength = 115;
+    public int arrowBleedLength = 90;
 
     @ConfigEntry.Category("bleeding_length")
     @ConfigEntry.Gui.Tooltip
