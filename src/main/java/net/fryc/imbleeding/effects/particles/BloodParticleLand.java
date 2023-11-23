@@ -5,6 +5,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.util.math.BlockPos;
 
 @Environment(EnvType.CLIENT)
 public class BloodParticleLand extends SpriteBillboardParticle {
@@ -19,7 +20,7 @@ public class BloodParticleLand extends SpriteBillboardParticle {
     }
 
     public void tick() {
-        if (this.age++ >= this.maxAge) {
+        if (this.age++ >= this.maxAge || this.world.getBlockState(BlockPos.ofFloored(this.x, this.y-1, this.z)).isReplaceable()) {
             this.markDead();
         }
     }
