@@ -8,6 +8,7 @@ import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.effects.particles.ModParticles;
 import net.fryc.imbleeding.items.ModItems;
 import net.fryc.imbleeding.network.ModPackets;
+import net.fryc.unremovableeffects.interfaces.Unremovable;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -30,6 +31,11 @@ public class ImBleeding implements ModInitializer {
 		TULIPS = TagKey.of(RegistryKeys.ITEM, new Identifier(MOD_ID, "tulips"));
 
 		ModEffects.registerEffects();
+		if(ModEffects.BLEED_EFFECT != null){
+			((Unremovable) ModEffects.BLEED_EFFECT).setUnremovable(config.milkBucketUnremovableBleeding);
+			((Unremovable) ModEffects.BLEEDOUT).setUnremovable(config.milkBucketUnremovableBleedout);
+			((Unremovable) ModEffects.HEALTH_LOSS).setUnremovable(config.milkBucketUnremovableHealthLoss);
+		}
 		ModItems.registerModItems();
 		ModParticles.registerModParticles();
 		ModPackets.registerC2SPackets();

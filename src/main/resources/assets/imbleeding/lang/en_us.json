@@ -14,6 +14,7 @@
   "text.autoconfig.imbleeding.category.bleeding": "Bleeding",
   "text.autoconfig.imbleeding.category.bleeding_length": "Effects Length",
   "text.autoconfig.imbleeding.category.visual": "Visual Effects",
+  "text.autoconfig.imbleeding.category.milk": "Milk Bucket",
 
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp": "Enable darkness at low HP",
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp.@Tooltip": "Player will get darkness after taking damage at low HP",
@@ -47,5 +48,9 @@
 
   "text.autoconfig.imbleeding.option.bleedingDamage": "Damage dealt by bleeding",
   "text.autoconfig.imbleeding.option.bleedingDamageFrequency": "Frequency of dealing damage by bleeding",
-  "text.autoconfig.imbleeding.option.bleedingDamageFrequency.@Tooltip": "20 = 1s. The higher this value, the more time it takes to bleed out"
+  "text.autoconfig.imbleeding.option.bleedingDamageFrequency.@Tooltip": "20 = 1s. The higher this value, the more time it takes to bleed out",
+
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Bleeding can't be removed with milk bucket [Restart Required]",
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Bleedout can't be removed with milk bucket [Restart Required]",
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Health Loss can't be removed with milk bucket [Restart Required]"
 }
