@@ -7,7 +7,6 @@ import net.fryc.imbleeding.config.ImbleedingConfig;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.effects.particles.ModParticles;
 import net.fryc.imbleeding.items.ModItems;
-import net.fryc.imbleeding.network.ModPackets;
 import net.fryc.unremovableeffects.interfaces.Unremovable;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
@@ -38,7 +37,6 @@ public class ImBleeding implements ModInitializer {
 		}
 		ModItems.registerModItems();
 		ModParticles.registerModParticles();
-		ModPackets.registerC2SPackets();
 
 	}
 }

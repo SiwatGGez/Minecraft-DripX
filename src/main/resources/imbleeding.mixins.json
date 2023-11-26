@@ -7,11 +7,11 @@
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "HoneyBottleMixin",
-    "HealthFlaskItemMixin"
+    "HealthFlaskItemMixin",
+    "ServerPlayerEntityMixin"
   ],
   "client": [
-    "LivingEntityRendererMixin",
-    "ClientPlayerEntityMixin"
+    "LivingEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
