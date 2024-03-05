@@ -1,7 +1,6 @@
 package net.fryc.imbleeding.mixin;
 
 import net.fryc.imbleeding.ImBleeding;
-import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.tags.ModDamageTypeTags;
 import net.fryc.imbleeding.tags.ModEntityTypeTags;
 import net.fryc.imbleeding.util.BleedingHelper;
@@ -84,7 +83,7 @@ abstract class PlayerEntityMixin extends LivingEntity {
     public void noHealing(CallbackInfoReturnable<Boolean> ret) {
         PlayerEntity player = ((PlayerEntity) (Object) this);
         if(ImBleeding.config.bleedingStopsFoodHealing){
-            ret.setReturnValue(player.getHealth() > 0.0F && player.getHealth() < player.getMaxHealth() && !player.hasStatusEffect(ModEffects.BLEED_EFFECT));
+            ret.setReturnValue(BleedingHelper.shouldStopFoodHealing(player));
         }
     }
 

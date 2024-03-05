@@ -34,6 +34,7 @@ public class ImBleeding implements ModInitializer {
 			((Unremovable) ModEffects.BLEED_EFFECT).setUnremovable(config.milkBucketUnremovableBleeding);
 			((Unremovable) ModEffects.BLEEDOUT).setUnremovable(config.milkBucketUnremovableBleedout);
 			((Unremovable) ModEffects.HEALTH_LOSS).setUnremovable(config.milkBucketUnremovableHealthLoss);
+			((Unremovable) ModEffects.BROKEN).setUnremovable(config.milkBucketUnremovableBroken);
 		}
 		ModItems.registerModItems();
 		ModParticles.registerModParticles();

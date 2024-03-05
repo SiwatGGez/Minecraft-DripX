@@ -2,6 +2,7 @@ package net.fryc.imbleeding.util;
 
 import net.fryc.imbleeding.ImBleeding;
 import net.fryc.imbleeding.effects.ModEffects;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -87,5 +88,31 @@ public class BleedingHelper {
     private static boolean checkIfBleedingCanBeUpgraded(DamageSource source){
         if(source.isIn(DamageTypeTags.IS_PROJECTILE)) return ImBleeding.config.enableArrowEffectUpgrading;
         return ImBleeding.config.enableMeleeEffectUpgrading;
+    }
+
+    public static boolean shouldStopFoodHealing(PlayerEntity player){
+        return player.getHealth() > 0.0F && player.getHealth() < player.getMaxHealth() && !player.hasStatusEffect(ModEffects.BLEED_EFFECT);
+    }
+
+    public static void applyBrokenEffect(LivingEntity entity, float damage){
+        int duration;
+        if(entity.hasStatusEffect(ModEffects.BROKEN)){
+            duration = entity.getActiveStatusEffects().get(ModEffects.BROKEN).getDuration() + (int)(ImBleeding.config.brokenLengthPerHealthPointLost*damage);
+        }
+        else {
+            duration = ImBleeding.config.baseBrokenLength + (int)(ImBleeding.config.brokenLengthPerHealthPointLost*(damage-ImBleeding.config.minFallDamageTakenToGetBroken));
+        }
+        entity.addStatusEffect(new StatusEffectInstance(ModEffects.BROKEN, duration, 0, false, false, true));
+    }
+
+    public static boolean shouldApplyBrokenEffect(DamageSource source, float damage, LivingEntity entity){
+        return source.isIn(DamageTypeTags.IS_FALL) && (damage > ImBleeding.config.minFallDamageTakenToGetBroken || entity.hasStatusEffect(ModEffects.BROKEN));
+    }
+
+    /**
+     * For Broken status effect calculations
+     */
+    public static float reduceFallDamageWithFeatherFalling(float damage, int featherFallingLevel){
+        return damage * (featherFallingLevel*ImBleeding.config.featherFallingProtectionForBrokenEffect/100);
     }
 }
