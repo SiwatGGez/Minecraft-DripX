@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "imbleeding:item/soaked_bandage_base",
+    "layer1": "imbleeding:item/soaked_bandage_colored"
+  }
+}
