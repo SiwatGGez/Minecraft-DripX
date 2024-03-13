@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "imbleeding:bandage",
+    "imbleeding:honey_bandage",
+    "imbleeding:sticky_bandage",
+    "imbleeding:soaked_bandage"
+  ]
+}

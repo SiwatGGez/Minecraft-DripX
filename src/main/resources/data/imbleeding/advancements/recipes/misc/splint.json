@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "imbleeding:splint"
+    ]
+  },
+  "criteria": {
+    "has_bandage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "imbleeding:bandage"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "imbleeding:splint"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bandage",
+      "has_the_recipe"
+    ]
+  ]
+}

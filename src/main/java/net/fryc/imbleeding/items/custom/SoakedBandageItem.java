@@ -27,7 +27,7 @@ public class SoakedBandageItem extends BandageItem {
             }
             else if(potion != Potions.EMPTY){
                 for(StatusEffectInstance effect : potion.getEffects()){
-                    user.addStatusEffect(new StatusEffectInstance(effect.getEffectType(), (int)(effect.getDuration()*0.7F), effect.getAmplifier(), effect.isAmbient(), effect.shouldShowParticles(), effect.shouldShowIcon()));
+                    user.addStatusEffect(new StatusEffectInstance(effect.getEffectType(), (int)(effect.getDuration()*0.65F), effect.getAmplifier(), effect.isAmbient(), effect.shouldShowParticles(), effect.shouldShowIcon()));
                 }
             }
         }
@@ -39,7 +39,7 @@ public class SoakedBandageItem extends BandageItem {
     }
 
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        PotionUtil.buildTooltip(stack, tooltip, 0.7F);
+        PotionUtil.buildTooltip(stack, tooltip, 0.65F);
     }
 
     public String getTranslationKey(ItemStack stack) {

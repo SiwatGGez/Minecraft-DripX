@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X#X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "tag": "imbleeding:bandages"
+    }
+  },
+  "result": {
+    "item": "imbleeding:splint"
+  }
+}
