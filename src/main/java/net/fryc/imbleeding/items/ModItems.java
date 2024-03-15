@@ -29,14 +29,14 @@ public class ModItems {
     public static final Item STICKY_BANDAGE = registerItem("sticky_bandage" ,
             new BandageItem(new FabricItemSettings().maxCount(16)));
 
-    public static final Item HERBAL_BALM = registerItem("herbal_balm" ,// todo tekstury, modele i t p
+    public static final Item HERBAL_BALM = registerItem("herbal_balm" ,
             new BalmItem(new FabricItemSettings().maxCount(1)));
 
     public static final Item SPLINT = registerItem("splint" ,
             new SplintItem(new FabricItemSettings().maxCount(16)));
 
     public static final Item SOAKED_BANDAGE = registerItem("soaked_bandage" , // todo receptury, lang, config
-            new SoakedBandageItem(new FabricItemSettings().maxCount(64)));
+            new SoakedBandageItem(new FabricItemSettings().maxCount(16)));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(ImBleeding.MOD_ID, name), item);

@@ -7,6 +7,7 @@ import net.fryc.imbleeding.config.ImbleedingConfig;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.effects.particles.ModParticles;
 import net.fryc.imbleeding.items.ModItems;
+import net.fryc.imbleeding.recipes.ModRecipeSerializers;
 import net.fryc.unremovableeffects.interfaces.Unremovable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,7 @@ public class ImBleeding implements ModInitializer {
 		AutoConfig.register(ImbleedingConfig.class, GsonConfigSerializer::new);
 		config = AutoConfig.getConfigHolder(ImbleedingConfig.class).getConfig();
 
-
+		ModRecipeSerializers.registerModRecipeSerializers();
 		ModEffects.registerEffects();
 		if(ModEffects.BLEED_EFFECT != null){
 			((Unremovable) ModEffects.BLEED_EFFECT).setUnremovable(config.milkBucketUnremovableBleeding);
