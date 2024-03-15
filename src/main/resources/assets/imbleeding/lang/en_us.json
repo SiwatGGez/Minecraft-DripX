@@ -2,13 +2,36 @@
   "effect.imbleeding.bleed": "Bleeding",
   "effect.imbleeding.bleedout": "Bleed out",
   "effect.imbleeding.health_loss": "Health Loss",
+  "effect.imbleeding.broken": "Broken",
 
   "item.imbleeding.bandage": "Bandage",
   "item.imbleeding.honey_bandage": "Honey Bandage",
   "item.imbleeding.sticky_bandage": "Sticky Bandage",
   "item.imbleeding.herbal_balm": "Herbal Balm",
+  "item.imbleeding.soaked_bandage": "Soaked Bandage",
+  "item.imbleeding.splint": "Splint",
 
   "death.attack.bleed": "%1$s bled out",
+
+  "item.imbleeding.soaked_bandage.effect.water": "Wet Bandage",
+  "item.imbleeding.soaked_bandage.effect.fire_resistance": "Bandage of Fire Resistance",
+  "item.imbleeding.soaked_bandage.effect.harming": "Bandage of Harming",
+  "item.imbleeding.soaked_bandage.effect.healing": "Bandage of Healing",
+  "item.imbleeding.soaked_bandage.effect.invisibility": "Bandage of Invisibility",
+  "item.imbleeding.soaked_bandage.effect.leaping": "Bandage of Leaping",
+  "item.imbleeding.soaked_bandage.effect.levitation": "Bandage of Levitation",
+  "item.imbleeding.soaked_bandage.effect.luck": "Bandage of Luck",
+  "item.imbleeding.soaked_bandage.effect.night_vision": "Bandage of Night Vision",
+  "item.imbleeding.soaked_bandage.effect.poison": "Bandage of Poison",
+  "item.imbleeding.soaked_bandage.effect.regeneration": "Bandage of Regeneration",
+  "item.imbleeding.soaked_bandage.effect.slow_falling": "Bandage of Slow Falling",
+  "item.imbleeding.soaked_bandage.effect.slowness": "Bandage of Slowness",
+  "item.imbleeding.soaked_bandage.effect.strength": "Bandage of Strength",
+  "item.imbleeding.soaked_bandage.effect.swiftness": "Bandage of Swiftness",
+  "item.imbleeding.soaked_bandage.effect.turtle_master": "Bandage of the Turtle Master",
+  "item.imbleeding.soaked_bandage.effect.water_breathing": "Bandage of Water Breathing",
+  "item.imbleeding.soaked_bandage.effect.weakness": "Bandage of Weakness",
+  
 
   "text.autoconfig.imbleeding.title": "Haemorrhage Config",
   "text.autoconfig.imbleeding.category.bleeding": "Bleeding",
@@ -43,6 +66,8 @@
   "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss": "Base chance to upgrade bleeding or health loss (%)",
   "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss.@Tooltip": "This chance is multiplied by damage taken. Base chance for getting Bleeding (or Health Loss) III is: thisValue/10 + 1",
 
+  "text.autoconfig.imbleeding.option.minFallDamageTakenToGetBroken": "Fall damage threshold after which player gets Broken",
+
   "text.autoconfig.imbleeding.option.armorBleedingProtection": "Bleeding reduction per armor point (%)",
   "text.autoconfig.imbleeding.option.toughnessBleedingProtection": "Bleeding reduction per toughness point (%)",
 
@@ -50,7 +75,13 @@
   "text.autoconfig.imbleeding.option.bleedingDamageFrequency": "Frequency of dealing damage by bleeding",
   "text.autoconfig.imbleeding.option.bleedingDamageFrequency.@Tooltip": "20 = 1s. The higher this value, the more time it takes to bleed out",
 
+  "text.autoconfig.imbleeding.option.baseBrokenLength": "Base Broken length",
+  "text.autoconfig.imbleeding.option.baseBrokenLength.@Tooltip": "20 = 1s. This value is used only when player doesn't have Broken",
+  "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost": "Broken length per health point lost",
+  "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost.@Tooltip": "20 = 1s. Works after reaching fall damage threshold to get Broken",
+
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Bleeding can't be removed with milk bucket [Restart Required]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Bleedout can't be removed with milk bucket [Restart Required]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Health Loss can't be removed with milk bucket [Restart Required]"
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Health Loss can't be removed with milk bucket [Restart Required]",
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Broken can't be removed with milk bucket [Restart Required]"
 }

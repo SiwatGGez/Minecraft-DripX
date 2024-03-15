@@ -3,12 +3,34 @@
   "item.imbleeding.honey_bandage": "Bandaż z Miodem",
   "item.imbleeding.sticky_bandage": "Lepki Bandaż",
   "item.imbleeding.herbal_balm": "Ziołowy Balsam",
+  "item.imbleeding.soaked_bandage": "Nasączony Bandaż",
+  "item.imbleeding.splint": "Szyna",
 
   "death.attack.bleed": "%1$s wykrwawił się",
 
   "effect.imbleeding.bleed": "Krwawienie",
   "effect.imbleeding.bleedout": "Wykrwawienie",
   "effect.imbleeding.health_loss": "Utrata Zdrowia",
+  "effect.imbleeding.broken": "Połamany",
+
+  "item.imbleeding.soaked_bandage.effect.water": "Mokry Bandaż",
+  "item.imbleeding.soaked_bandage.effect.fire_resistance": "Bandaż Ognioodporności",
+  "item.imbleeding.soaked_bandage.effect.harming": "Bandaż Szkody",
+  "item.imbleeding.soaked_bandage.effect.healing": "Bandaż Leczenia",
+  "item.imbleeding.soaked_bandage.effect.invisibility": "Bandaż Niewidzialności",
+  "item.imbleeding.soaked_bandage.effect.leaping": "Bandaż Skoku",
+  "item.imbleeding.soaked_bandage.effect.levitation": "Bandaż Lewitacji",
+  "item.imbleeding.soaked_bandage.effect.luck": "Bandaż Szczęścia",
+  "item.imbleeding.soaked_bandage.effect.night_vision": "Bandaż Noktowizji",
+  "item.imbleeding.soaked_bandage.effect.poison": "Bandaż Trucizny",
+  "item.imbleeding.soaked_bandage.effect.regeneration": "Bandaż Regeneracji",
+  "item.imbleeding.soaked_bandage.effect.slow_falling": "Bandaż Powolnego Upadku",
+  "item.imbleeding.soaked_bandage.effect.slowness": "Bandaż Spowolnienia",
+  "item.imbleeding.soaked_bandage.effect.strength": "Bandaż Siły",
+  "item.imbleeding.soaked_bandage.effect.swiftness": "Bandaż Szybkości",
+  "item.imbleeding.soaked_bandage.effect.turtle_master": "Bandaż Żółwiego Mistrza",
+  "item.imbleeding.soaked_bandage.effect.water_breathing": "Bandaż Oddychania pod wodą",
+  "item.imbleeding.soaked_bandage.effect.weakness": "Bandaż Słabości",
   
   "text.autoconfig.imbleeding.title": "Konfiguracja Haemorrhage",
   "text.autoconfig.imbleeding.category.bleeding": "Krwawienie",
@@ -43,6 +65,8 @@
   "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss": "Podstawowa szansa na ulepszenie krwawienia lub utraty zdrowia (%)",
   "text.autoconfig.imbleeding.option.baseChanceToUpgradeBleedingOrHealthLoss.@Tooltip": "Ta wartość jest mnożona przez otrzymane obrażenia. Podstawowa szansa na zyskanie Krwawienia (lub Utraty Zdrowia) III to: taWartość/10 + 1",
 
+  "text.autoconfig.imbleeding.option.minFallDamageTakenToGetBroken": "Próg obrażeń od upadku po którym otrzymuje się efekt Połamany",
+
   "text.autoconfig.imbleeding.option.armorBleedingProtection": "Redukcja krwawienia na punkt pancerza (%)",
   "text.autoconfig.imbleeding.option.toughnessBleedingProtection": "Redukcja krwawienia na punkt wytrzymałości (Armor toughness) (%)",
 
@@ -50,7 +74,13 @@
   "text.autoconfig.imbleeding.option.bleedingDamageFrequency": "Częstość zadawania obrażeń przez krwawienie",
   "text.autoconfig.imbleeding.option.bleedingDamageFrequency.@Tooltip": "20 = 1s. Im wyższa ta wartość, tym dłużej zajmuje wykrwawianie się",
 
+  "text.autoconfig.imbleeding.option.baseBrokenLength": "Bazowy czas Połamania",
+  "text.autoconfig.imbleeding.option.baseBrokenLength.@Tooltip": "20 = 1s. Ta wartość jest używana tylko kiedy gracz nie ma efektu Połamany",
+  "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost": "Długość Połamania na utracony punkt zdrowia",
+  "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost.@Tooltip": "20 = 1s. Działa po osiągnięciu progu obrażeń potrzebnych aby otrzymać efekt Połamany",
+
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Krwawienie nie może być usunięte wiadrem mleka [Wymagany Restart]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Wykrwawienie nie może być usunięte wiadrem mleka [Wymagany Restart]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Utrata Zdrowia nie może być usunięta wiadrem mleka [Wymagany Restart]"
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Utrata Zdrowia nie może być usunięta wiadrem mleka [Wymagany Restart]",
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Połamanie nie może być usunięte wiadrem mleka [Restart Required]"
 }

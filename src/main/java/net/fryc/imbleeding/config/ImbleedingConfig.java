@@ -39,7 +39,6 @@ public class ImbleedingConfig implements ConfigData {
     public int baseChanceToUpgradeBleedingOrHealthLoss = 7;
 
     @ConfigEntry.Category("bleeding")
-    @ConfigEntry.Gui.Tooltip
     public float minFallDamageTakenToGetBroken = 9F;
 
 
