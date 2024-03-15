@@ -75,6 +75,10 @@ abstract class PlayerEntityMixin extends LivingEntity {
             BleedingHelper.reduceBleedingWithFire(player);
         }
 
+        if(BleedingHelper.shouldApplyBrokenEffect(source, amount, player)){
+            BleedingHelper.applyBrokenEffect(player, amount);
+        }
+
     }
 
 

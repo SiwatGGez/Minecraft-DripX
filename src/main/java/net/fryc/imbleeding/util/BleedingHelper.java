@@ -109,10 +109,4 @@ public class BleedingHelper {
         return source.isIn(DamageTypeTags.IS_FALL) && (damage > ImBleeding.config.minFallDamageTakenToGetBroken || entity.hasStatusEffect(ModEffects.BROKEN));
     }
 
-    /**
-     * For Broken status effect calculations
-     */
-    public static float reduceFallDamageWithFeatherFalling(float damage, int featherFallingLevel){
-        return damage * (featherFallingLevel*ImBleeding.config.featherFallingProtectionForBrokenEffect/100);
-    }
 }

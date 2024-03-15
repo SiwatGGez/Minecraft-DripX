@@ -1,11 +1,7 @@
 package net.fryc.imbleeding.mixin;
 
 import net.fryc.imbleeding.effects.ModEffects;
-import net.fryc.imbleeding.util.BleedingHelper;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.*;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
@@ -43,12 +39,12 @@ abstract class LivingEntityMixin extends Entity implements Attackable {
         }
     }
 
+    /*
     @Inject(method = "damage(Lnet/minecraft/entity/damage/DamageSource;F)Z", at = @At("TAIL"))
-    private void applyBrokenEffect(DamageSource source, float amount, CallbackInfoReturnable<Boolean> ret){
+    private void injected(DamageSource source, float amount, CallbackInfoReturnable<Boolean> ret){
         LivingEntity dys = ((LivingEntity)(Object)this);
-        float damage = BleedingHelper.reduceFallDamageWithFeatherFalling(amount, EnchantmentHelper.getEquipmentLevel(Enchantments.FEATHER_FALLING, dys));
-        if(BleedingHelper.shouldApplyBrokenEffect(source, damage, dys)){
-            BleedingHelper.applyBrokenEffect(dys, damage);
-        }
+
     }
+
+     */
 }

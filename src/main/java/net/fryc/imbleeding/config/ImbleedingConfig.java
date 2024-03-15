@@ -42,9 +42,6 @@ public class ImbleedingConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public float minFallDamageTakenToGetBroken = 9F;
 
-    @ConfigEntry.Category("bleeding")
-    @ConfigEntry.Gui.Tooltip
-    public float featherFallingProtectionForBrokenEffect = 15F;
 
     //length
     @ConfigEntry.Category("bleeding_length")
@@ -94,8 +91,8 @@ public class ImbleedingConfig implements ConfigData {
     public boolean milkBucketUnremovableBleedout = true;
     @ConfigEntry.Gui.RequiresRestart
     @ConfigEntry.Category("milk")
-    public boolean milkBucketUnremovableHealthLoss = false;
+    public boolean milkBucketUnremovableBroken = true;
     @ConfigEntry.Gui.RequiresRestart
     @ConfigEntry.Category("milk")
-    public boolean milkBucketUnremovableBroken = true;
+    public boolean milkBucketUnremovableHealthLoss = false;
 }
