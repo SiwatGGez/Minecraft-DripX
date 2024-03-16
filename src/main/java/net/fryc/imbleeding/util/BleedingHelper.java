@@ -91,7 +91,7 @@ public class BleedingHelper {
     }
 
     public static boolean shouldStopFoodHealing(PlayerEntity player){
-        return player.getHealth() > 0.0F && player.getHealth() < player.getMaxHealth() && !player.hasStatusEffect(ModEffects.BLEED_EFFECT);
+        return player.hasStatusEffect(ModEffects.BLEED_EFFECT);
     }
 
     public static void applyBrokenEffect(LivingEntity entity, float damage){

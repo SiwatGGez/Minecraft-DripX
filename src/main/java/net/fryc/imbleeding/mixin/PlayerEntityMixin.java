@@ -86,8 +86,8 @@ abstract class PlayerEntityMixin extends LivingEntity {
     @Inject(method = "canFoodHeal()Z", at = @At("RETURN"), cancellable = true)
     public void noHealing(CallbackInfoReturnable<Boolean> ret) {
         PlayerEntity player = ((PlayerEntity) (Object) this);
-        if(ImBleeding.config.bleedingStopsFoodHealing){
-            ret.setReturnValue(BleedingHelper.shouldStopFoodHealing(player));
+        if(ImBleeding.config.bleedingStopsFoodHealing && BleedingHelper.shouldStopFoodHealing(player)){
+            ret.setReturnValue(false);
         }
     }
 

@@ -35,7 +35,7 @@ public class ModItems {
     public static final Item SPLINT = registerItem("splint" ,
             new SplintItem(new FabricItemSettings().maxCount(16)));
 
-    public static final Item SOAKED_BANDAGE = registerItem("soaked_bandage" , // todo receptury, lang, config
+    public static final Item SOAKED_BANDAGE = registerItem("soaked_bandage" ,
             new SoakedBandageItem(new FabricItemSettings().maxCount(16)));
 
     private static Item registerItem(String name, Item item){
