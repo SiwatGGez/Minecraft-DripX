@@ -1,5 +1,6 @@
 package net.fryc.imbleeding.mixin.compatibility;
 
+import net.fryc.imbleeding.ImBleeding;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
@@ -24,7 +25,9 @@ abstract class MineCellsCompatibilityMixin extends Item {
     @Inject(method = "method_7861(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/item/ItemStack;", at = @At("HEAD"), cancellable = true)
     private void removeBleedingWithHealthFlask(ItemStack stack, World world, LivingEntity user , CallbackInfoReturnable<ItemStack> ret) {
         if(!world.isClient()){
-            user.removeStatusEffect(ModEffects.BLEED_EFFECT);
+            if(ImBleeding.config.enableMineCellsCompatibility){
+                user.removeStatusEffect(ModEffects.BLEED_EFFECT);
+            }
         }
     }
 

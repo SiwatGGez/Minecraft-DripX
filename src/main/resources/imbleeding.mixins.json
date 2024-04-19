@@ -8,6 +8,7 @@
     "PlayerEntityMixin",
     "HoneyBottleMixin",
     "ServerPlayerEntityMixin",
+    "ServerWorldMixin",
     "compatibility/MineCellsCompatibilityMixin",
     "compatibility/CombatRollCompatibilityMixin"
   ],
