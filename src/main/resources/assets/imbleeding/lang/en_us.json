@@ -38,6 +38,7 @@
   "text.autoconfig.imbleeding.category.bleeding_length": "Effects Length",
   "text.autoconfig.imbleeding.category.visual": "Visual Effects",
   "text.autoconfig.imbleeding.category.milk": "Milk Bucket",
+  "text.autoconfig.imbleeding.category.compatibility": "Compatibility",
 
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp": "Enable darkness at low HP",
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp.@Tooltip": "Player will get darkness after taking damage at low HP",
@@ -83,5 +84,10 @@
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Bleeding can't be removed with milk bucket [Restart Required]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Bleedout can't be removed with milk bucket [Restart Required]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Health Loss can't be removed with milk bucket [Restart Required]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Broken can't be removed with milk bucket [Restart Required]"
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Broken can't be removed with milk bucket [Restart Required]",
+
+  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility": "Enable Mine Cells compatibility",
+  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility.@Tooltip": "Makes Health Flask from MineCells remove bleeding (the one from Haemorrhage)",
+  "text.autoconfig.imbleeding.option.enableCombatRollCompatibility": "Enable Combat Roll compatibility [Restart Required]",
+  "text.autoconfig.imbleeding.option.enableCombatRollCompatibility.@Tooltip": "Makes Broken status effect disable rolling"
 }

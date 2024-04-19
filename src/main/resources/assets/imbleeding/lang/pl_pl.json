@@ -37,6 +37,7 @@
   "text.autoconfig.imbleeding.category.bleeding_length": "Długość Efektów",
   "text.autoconfig.imbleeding.category.visual": "Efekty Wizualne",
   "text.autoconfig.imbleeding.category.milk": "Wiadro Mleka",
+  "text.autoconfig.imbleeding.category.compatibility": "Kompatybilność",
 
   "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp": "Włącz oślepienie przy niskim zdrowiu",
   "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp.@Tooltip": "Gracz dostanie oślepienie, gdy jego zdrowie będzie wynosić 1",
@@ -82,5 +83,10 @@
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Krwawienie nie może być usunięte wiadrem mleka [Wymagany Restart]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Wykrwawienie nie może być usunięte wiadrem mleka [Wymagany Restart]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Utrata Zdrowia nie może być usunięta wiadrem mleka [Wymagany Restart]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Połamanie nie może być usunięte wiadrem mleka [Restart Required]"
+  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Połamanie nie może być usunięte wiadrem mleka [Restart Required]",
+
+  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility": "Włącz kompatybilność z Mine Cells",
+  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility.@Tooltip": "Sprawia że Mikstura Zdrowia z Mine Cells usuwa krwawienie (te z Haemorrhage)",
+  "text.autoconfig.imbleeding.option.enableCombatRollCompatibility": "Włącz kompatybilność z Combat Roll [Wymagany Restart]",
+  "text.autoconfig.imbleeding.option.enableCombatRollCompatibility.@Tooltip": "Sprawia że efekt Połamany wyłącza przewroty"
 }
