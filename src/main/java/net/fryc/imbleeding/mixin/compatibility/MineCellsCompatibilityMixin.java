@@ -1,4 +1,4 @@
-package net.fryc.imbleeding.mixin;
+package net.fryc.imbleeding.mixin.compatibility;
 
 import net.fryc.imbleeding.effects.ModEffects;
 import net.minecraft.entity.LivingEntity;
@@ -14,9 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Pseudo
 @Mixin(targets = "com.github.mim1q.minecells.item.HealthFlaskItem")
-abstract class HealthFlaskItemMixin extends Item {
+abstract class MineCellsCompatibilityMixin extends Item {
 
-    public HealthFlaskItemMixin(Settings settings) {
+    public MineCellsCompatibilityMixin(Settings settings) {
         super(settings);
     }
 

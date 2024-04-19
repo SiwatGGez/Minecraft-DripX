@@ -7,8 +7,9 @@
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "HoneyBottleMixin",
-    "HealthFlaskItemMixin",
-    "ServerPlayerEntityMixin"
+    "ServerPlayerEntityMixin",
+    "compatibility/MineCellsCompatibilityMixin",
+    "compatibility/CombatRollCompatibilityMixin"
   ],
   "client": [
     "LivingEntityRendererMixin"
