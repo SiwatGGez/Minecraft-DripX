@@ -35,4 +35,11 @@ public class BleedoutEffect extends StatusEffect {
         else return true;
     }
 
+    public void onApplied(LivingEntity entity, int amplifier) {
+        super.onApplied(entity, amplifier);
+        if (entity.getHealth() > entity.getMaxHealth()) {
+            entity.setHealth(entity.getMaxHealth());
+        }
+    }
+
 }
