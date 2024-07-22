@@ -43,17 +43,19 @@ abstract class LivingEntityMixin extends Entity implements Attackable {
     @Inject(method = "consumeItem()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;clearActiveItem()V"))
     private void removeEffectsAfterUsingItem(CallbackInfo info) {
         LivingEntity dys = ((LivingEntity)(Object)this);
-        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BLEEDING)){
-            dys.removeStatusEffect(ModEffects.BLEED_EFFECT);
-        }
-        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_HEALTH_LOSS)){
-            dys.removeStatusEffect(ModEffects.HEALTH_LOSS);
-        }
-        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BROKEN)){
-            dys.removeStatusEffect(ModEffects.BROKEN);
-        }
-        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BLEEDOUT)){
-            dys.removeStatusEffect(ModEffects.BLEEDOUT);
+        if(!dys.getWorld().isClient()){
+            if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BLEEDING)){
+                dys.removeStatusEffect(ModEffects.BLEED_EFFECT);
+            }
+            if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_HEALTH_LOSS)){
+                dys.removeStatusEffect(ModEffects.HEALTH_LOSS);
+            }
+            if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BROKEN)){
+                dys.removeStatusEffect(ModEffects.BROKEN);
+            }
+            if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BLEEDOUT)){
+                dys.removeStatusEffect(ModEffects.BLEEDOUT);
+            }
         }
     }
 
