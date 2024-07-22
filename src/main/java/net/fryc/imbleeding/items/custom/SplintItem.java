@@ -1,9 +1,6 @@
 package net.fryc.imbleeding.items.custom;
 
-import net.fryc.imbleeding.effects.ModEffects;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,12 +20,6 @@ public class SplintItem extends Item {
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         super.finishUsing(stack, world, user);
         if (!world.isClient) {
-            if(user.hasStatusEffect(ModEffects.BROKEN)){
-                int duration = user.getActiveStatusEffects().get(ModEffects.BROKEN).getDuration();
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, duration, 0, false, false, true));
-            }
-
-
             if(!((PlayerEntity)user).getAbilities().creativeMode) stack.setCount(stack.getCount() - 1);
             user.getWorld().playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, SoundCategory.PLAYERS, 1.0F, 0.75F);
 
