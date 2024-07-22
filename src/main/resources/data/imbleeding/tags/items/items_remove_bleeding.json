@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#imbleeding:bandages",
+    "imbleeding:bandage",
+    "imbleeding:honey_bandage",
+    "imbleeding:sticky_bandage",
+    "imbleeding:soaked_bandage",
     "minecraft:enchanted_golden_apple"
   ]
 }
