@@ -25,7 +25,6 @@ public class SplintItem extends Item {
         if (!world.isClient) {
             if(user.hasStatusEffect(ModEffects.BROKEN)){
                 int duration = user.getActiveStatusEffects().get(ModEffects.BROKEN).getDuration();
-                user.removeStatusEffect(ModEffects.BROKEN);
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, duration, 0, false, false, true));
             }
 

@@ -1,6 +1,5 @@
 package net.fryc.imbleeding.items.custom;
 
-import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.items.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffects;
@@ -24,10 +23,8 @@ public class BandageItem extends Item {
         if (!world.isClient) {
             if(this == ModItems.HONEY_BANDAGE){
                 user.removeStatusEffect(StatusEffects.POISON);
-                user.removeStatusEffect(ModEffects.HEALTH_LOSS);
                 user.heal(3f);
             }
-            user.removeStatusEffect(ModEffects.BLEED_EFFECT);
             user.heal(2f);
             if(!((PlayerEntity)user).getAbilities().creativeMode) stack.setCount(stack.getCount() - 1);
             user.getWorld().playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, SoundCategory.PLAYERS, 1.0F, 1.0F);

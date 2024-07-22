@@ -8,8 +8,12 @@ import net.minecraft.util.Identifier;
 
 public final class ModItemTags {
 
-    public static TagKey<Item> TULIPS = TagKey.of(RegistryKeys.ITEM, new Identifier(ImBleeding.MOD_ID, "tulips"));
-    public static TagKey<Item> BANDAGES = TagKey.of(RegistryKeys.ITEM, new Identifier(ImBleeding.MOD_ID, "bandages"));
+    public static TagKey<Item> TULIPS = register( "tulips");
+    public static TagKey<Item> BANDAGES = register( "bandages");
+    public static TagKey<Item> ITEMS_REMOVE_BLEEDING = register( "items_remove_bleeding");
+    public static TagKey<Item> ITEMS_REMOVE_HEALTH_LOSS = register( "items_remove_health_loss");
+    public static TagKey<Item> ITEMS_REMOVE_BROKEN = register( "items_remove_broken");
+    public static TagKey<Item> ITEMS_REMOVE_BLEEDOUT = register( "items_remove_bleedout");
 
 
     private ModItemTags(){

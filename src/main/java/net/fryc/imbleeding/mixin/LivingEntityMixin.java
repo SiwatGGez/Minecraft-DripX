@@ -1,6 +1,7 @@
 package net.fryc.imbleeding.mixin;
 
 import net.fryc.imbleeding.effects.ModEffects;
+import net.fryc.imbleeding.tags.ModItemTags;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.world.World;
@@ -39,12 +40,21 @@ abstract class LivingEntityMixin extends Entity implements Attackable {
         }
     }
 
-    /*
-    @Inject(method = "damage(Lnet/minecraft/entity/damage/DamageSource;F)Z", at = @At("TAIL"))
-    private void injected(DamageSource source, float amount, CallbackInfoReturnable<Boolean> ret){
+    @Inject(method = "consumeItem()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;clearActiveItem()V"))
+    private void removeEffectsAfterUsingItem(CallbackInfo info) {
         LivingEntity dys = ((LivingEntity)(Object)this);
-
+        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BLEEDING)){
+            dys.removeStatusEffect(ModEffects.BLEED_EFFECT);
+        }
+        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_HEALTH_LOSS)){
+            dys.removeStatusEffect(ModEffects.HEALTH_LOSS);
+        }
+        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BROKEN)){
+            dys.removeStatusEffect(ModEffects.BROKEN);
+        }
+        if(dys.getActiveItem().isIn(ModItemTags.ITEMS_REMOVE_BLEEDOUT)){
+            dys.removeStatusEffect(ModEffects.BLEEDOUT);
+        }
     }
 
-     */
 }
