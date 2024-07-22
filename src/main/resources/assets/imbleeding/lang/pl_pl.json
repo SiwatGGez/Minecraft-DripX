@@ -85,8 +85,6 @@
   "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Utrata Zdrowia nie może być usunięta wiadrem mleka [Wymagany Restart]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Połamanie nie może być usunięte wiadrem mleka [Restart Required]",
 
-  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility": "Włącz kompatybilność z Mine Cells",
-  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility.@Tooltip": "Sprawia że Mikstura Zdrowia z Mine Cells usuwa krwawienie (te z Haemorrhage)",
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility": "Włącz kompatybilność z Combat Roll [Wymagany Restart]",
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility.@Tooltip": "Sprawia że efekt Połamany wyłącza przewroty"
 }

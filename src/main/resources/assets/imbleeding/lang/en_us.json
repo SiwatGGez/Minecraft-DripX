@@ -86,8 +86,6 @@
   "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Health Loss can't be removed with milk bucket [Restart Required]",
   "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Broken can't be removed with milk bucket [Restart Required]",
 
-  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility": "Enable Mine Cells compatibility",
-  "text.autoconfig.imbleeding.option.enableMineCellsCompatibility.@Tooltip": "Makes Health Flask from MineCells remove bleeding (the one from Haemorrhage)",
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility": "Enable Combat Roll compatibility [Restart Required]",
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility.@Tooltip": "Makes Broken status effect disable rolling"
 }
