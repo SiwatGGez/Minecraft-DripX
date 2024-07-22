@@ -95,11 +95,6 @@ public class ImbleedingConfig implements ConfigData {
     @ConfigEntry.Category("milk")
     public boolean milkBucketUnremovableHealthLoss = false;
 
-
-    @ConfigEntry.Gui.Tooltip
-    @ConfigEntry.Category("compatibility")
-    public boolean enableMineCellsCompatibility = true;
-
     @ConfigEntry.Gui.RequiresRestart
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("compatibility")
