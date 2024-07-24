@@ -36,7 +36,6 @@
   "text.autoconfig.imbleeding.category.bleeding": "Krwawienie",
   "text.autoconfig.imbleeding.category.bleeding_length": "Długość Efektów",
   "text.autoconfig.imbleeding.category.visual": "Efekty Wizualne",
-  "text.autoconfig.imbleeding.category.milk": "Wiadro Mleka",
   "text.autoconfig.imbleeding.category.compatibility": "Kompatybilność",
 
   "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp": "Włącz oślepienie przy niskim zdrowiu",
@@ -79,11 +78,6 @@
   "text.autoconfig.imbleeding.option.baseBrokenLength.@Tooltip": "20 = 1s. Ta wartość jest używana tylko kiedy gracz nie ma efektu Połamany",
   "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost": "Długość Połamania na utracony punkt zdrowia",
   "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost.@Tooltip": "20 = 1s. Działa po osiągnięciu progu obrażeń potrzebnych aby otrzymać efekt Połamany",
-
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Krwawienie nie może być usunięte wiadrem mleka [Wymagany Restart]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Wykrwawienie nie może być usunięte wiadrem mleka [Wymagany Restart]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Utrata Zdrowia nie może być usunięta wiadrem mleka [Wymagany Restart]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Połamanie nie może być usunięte wiadrem mleka [Restart Required]",
 
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility": "Włącz kompatybilność z Combat Roll [Wymagany Restart]",
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility.@Tooltip": "Sprawia że efekt Połamany wyłącza przewroty"

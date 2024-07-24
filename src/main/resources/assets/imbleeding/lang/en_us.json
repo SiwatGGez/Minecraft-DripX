@@ -37,7 +37,6 @@
   "text.autoconfig.imbleeding.category.bleeding": "Bleeding",
   "text.autoconfig.imbleeding.category.bleeding_length": "Effects Length",
   "text.autoconfig.imbleeding.category.visual": "Visual Effects",
-  "text.autoconfig.imbleeding.category.milk": "Milk Bucket",
   "text.autoconfig.imbleeding.category.compatibility": "Compatibility",
 
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp": "Enable darkness at low HP",
@@ -80,11 +79,6 @@
   "text.autoconfig.imbleeding.option.baseBrokenLength.@Tooltip": "20 = 1s. This value is used only when player doesn't have Broken",
   "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost": "Broken length per health point lost",
   "text.autoconfig.imbleeding.option.brokenLengthPerHealthPointLost.@Tooltip": "20 = 1s. Works after reaching fall damage threshold to get Broken",
-
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBleeding": "Bleeding can't be removed with milk bucket [Restart Required]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBleedout": "Bleedout can't be removed with milk bucket [Restart Required]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableHealthLoss": "Health Loss can't be removed with milk bucket [Restart Required]",
-  "text.autoconfig.imbleeding.option.milkBucketUnremovableBroken": "Broken can't be removed with milk bucket [Restart Required]",
 
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility": "Enable Combat Roll compatibility [Restart Required]",
   "text.autoconfig.imbleeding.option.enableCombatRollCompatibility.@Tooltip": "Makes Broken status effect disable rolling"

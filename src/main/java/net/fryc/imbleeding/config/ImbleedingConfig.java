@@ -81,20 +81,6 @@ public class ImbleedingConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public boolean enableBlindnessAtLowHp = true;
 
-    //milk bucket
-    @ConfigEntry.Gui.RequiresRestart
-    @ConfigEntry.Category("milk")
-    public boolean milkBucketUnremovableBleeding = true;
-    @ConfigEntry.Gui.RequiresRestart
-    @ConfigEntry.Category("milk")
-    public boolean milkBucketUnremovableBleedout = true;
-    @ConfigEntry.Gui.RequiresRestart
-    @ConfigEntry.Category("milk")
-    public boolean milkBucketUnremovableBroken = true;
-    @ConfigEntry.Gui.RequiresRestart
-    @ConfigEntry.Category("milk")
-    public boolean milkBucketUnremovableHealthLoss = false;
-
     @ConfigEntry.Gui.RequiresRestart
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("compatibility")
