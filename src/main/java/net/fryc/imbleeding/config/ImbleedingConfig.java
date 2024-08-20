@@ -80,9 +80,13 @@ public class ImbleedingConfig implements ConfigData {
     @ConfigEntry.Category("visual")
     @ConfigEntry.Gui.Tooltip
     public boolean enableBlindnessAtLowHp = true;
+    @ConfigEntry.Category("visual")
+    @ConfigEntry.Gui.Tooltip
+    public boolean enableBloodParticlesClientSided = true;
 
     @ConfigEntry.Gui.RequiresRestart
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Category("compatibility")
     public boolean enableCombatRollCompatibility = true;
+
 }

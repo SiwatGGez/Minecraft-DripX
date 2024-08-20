@@ -42,6 +42,8 @@
   "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp.@Tooltip": "Gracz dostanie oślepienie, gdy jego zdrowie będzie wynosić 1",
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp": "Włącz ciemność przy niskim zdrowiu",
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp.@Tooltip": "Gracz dostanie ciemność, po otrzymaniu obrażen na niskim zdrowiu",
+  "text.autoconfig.imbleeding.option.enableBloodParticlesClientSided": "Włącz cząsteczki krwi [Po stronie Klienta]",
+  "text.autoconfig.imbleeding.option.enableBloodParticlesClientSided.@Tooltip": "Gracze tworzą cząsteczki krwi kiedy krwawią. Ta opcja jest po stronie klienta (na serwerze nic nie robi)",
 
   "text.autoconfig.imbleeding.option.bleedoutKills": "Wykrwawienie może zabić",
   "text.autoconfig.imbleeding.option.bleedingStopsFoodHealing": "Krwawienie zatrzymuje leczenie z jedzenia",

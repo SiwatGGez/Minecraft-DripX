@@ -43,6 +43,8 @@
   "text.autoconfig.imbleeding.option.enableDarknessAtLowHp.@Tooltip": "Player will get darkness after taking damage at low HP",
   "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp": "Enable blindness at low HP",
   "text.autoconfig.imbleeding.option.enableBlindnessAtLowHp.@Tooltip": "Player will get blindness at 1 hp",
+  "text.autoconfig.imbleeding.option.enableBloodParticlesClientSided": "Enable blood particles [Client Sided]",
+  "text.autoconfig.imbleeding.option.enableBloodParticlesClientSided.@Tooltip": "Players spawn blood particles when bleeding. This option is client sided (it does nothing on server)",
 
   "text.autoconfig.imbleeding.option.bleedoutKills": "Bleed out can kill",
   "text.autoconfig.imbleeding.option.bleedingStopsFoodHealing": "Bleeding stops food healing",
