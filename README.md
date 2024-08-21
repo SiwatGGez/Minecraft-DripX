@@ -15,10 +15,12 @@ Length of bleeding depends on damage taken and players armor.
 
 # Datapacks:
 Use following tags for:
-* excluding mobs from giving Bleeding: `imbleeding/data/tags/entity_types/no_bleeding_apply_mobs.json`
-* selecting projectiles that cause Bleeding (won't work if projectile deals fire damage): `imbleeding/data/tags/entity_types/projectiles_causing_bleeding.json`
+* excluding mobs from giving Bleeding: `imbleeding/data/tags/entity_type/no_bleeding_apply_mobs.json`
+* selecting projectiles that cause Bleeding (won't work if projectile deals fire damage): `imbleeding/data/tags/entity_type/projectiles_causing_bleeding.json`
 * making items remove:
-  1. Bleeding: `imbleeding/data/tags/items/items_remove_bleeding.json`
-  2. Bleedout: `imbleeding/data/tags/items/items_remove_bleedout.json`
-  3. Health Loss: `imbleeding/data/tags/items/items_remove_health_loss.json`
-  4. Broken: `imbleeding/data/tags/items/items_remove_broken.json`
+  1. Bleeding: `imbleeding/data/tags/item/items_remove_bleeding.json`
+  2. Bleedout: `imbleeding/data/tags/item/items_remove_bleedout.json`
+  3. Health Loss: `imbleeding/data/tags/item/items_remove_health_loss.json`
+  4. Broken: `imbleeding/data/tags/item/items_remove_broken.json`
+
+(remember that some directories changed with 1.21, for example `items` is now `item`)
