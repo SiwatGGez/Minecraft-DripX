@@ -8,6 +8,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.DamageTypeTags;
 
 public class BleedingHelper {
@@ -33,7 +34,7 @@ public class BleedingHelper {
     }
 
     public static void applyBleedingOrHealthLoss(PlayerEntity player, int duration, boolean healthLoss, DamageSource source, float amount){
-        StatusEffect effect;
+        RegistryEntry<StatusEffect> effect;
         if(!healthLoss) effect = ModEffects.BLEED_EFFECT;
         else effect = ModEffects.HEALTH_LOSS;
 

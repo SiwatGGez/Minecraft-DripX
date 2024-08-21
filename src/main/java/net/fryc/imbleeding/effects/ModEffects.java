@@ -7,23 +7,24 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public class ModEffects {
-    public static StatusEffect BLEED_EFFECT;
-    public static StatusEffect BLEEDOUT;
-    public static StatusEffect HEALTH_LOSS;
+    public static RegistryEntry<StatusEffect> BLEED_EFFECT;
+    public static RegistryEntry<StatusEffect> BLEEDOUT;
+    public static RegistryEntry<StatusEffect> HEALTH_LOSS;
 
-    public static StatusEffect BROKEN;
+    public static RegistryEntry<StatusEffect> BROKEN;
 
-    private static final StatusEffect bleedout = new BleedoutEffect(StatusEffectCategory.HARMFUL, 16262179).addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "7D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -12.0, EntityAttributeModifier.Operation.ADDITION);
+    private static final StatusEffect bleedout = new BleedoutEffect(StatusEffectCategory.HARMFUL, 16262179).addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, Identifier.of(ImBleeding.MOD_ID, "effect.bleedout"), -12.0, EntityAttributeModifier.Operation.ADD_VALUE);
     private static final StatusEffect bleed = new BleedEffect(StatusEffectCategory.HARMFUL, 16262179);
-    private static final StatusEffect healthloss = new HealthLossEffect(StatusEffectCategory.HARMFUL, 16262179).addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "8D6F0BA2-1186-46AC-B896-C61C5CEE99CC", -2.0, EntityAttributeModifier.Operation.ADDITION);
-    private static final StatusEffect broken = new BrokenEffect(StatusEffectCategory.HARMFUL, 9154528).addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,"3104DE5E-6CE8-4080-940E-524CCF161820", -0.15, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+    private static final StatusEffect healthloss = new HealthLossEffect(StatusEffectCategory.HARMFUL, 16262179).addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, Identifier.of(ImBleeding.MOD_ID, "effect.health_loss"), -2.0, EntityAttributeModifier.Operation.ADD_VALUE);
+    private static final StatusEffect broken = new BrokenEffect(StatusEffectCategory.HARMFUL, 9154528).addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,Identifier.of(ImBleeding.MOD_ID, "effect.broken"), -0.15, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL);
 
-    public static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.register(Registries.STATUS_EFFECT, new Identifier(ImBleeding.MOD_ID, name),
-                effect);
+
+    private static RegistryEntry<StatusEffect> registerStatusEffect(String id, StatusEffect statusEffect) {
+        return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(ImBleeding.MOD_ID, id), statusEffect);
     }
 
 

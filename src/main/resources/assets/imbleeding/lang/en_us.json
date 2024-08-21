@@ -1,4 +1,11 @@
 {
+  "tag.item.imbleeding.tulips": "Tulips",
+  "tag.item.imbleeding.bandages": "Bandages",
+  "tag.item.imbleeding.items_remove_bleeding": "Items that cure Bleeding",
+  "tag.item.imbleeding.items_remove_health_loss": "Items that cure Health Loss",
+  "tag.item.imbleeding.items_remove_broken": "Items that cure Broken",
+  "tag.item.imbleeding.items_remove_bleedout": "Items that cure Bleed out",
+
   "effect.imbleeding.bleed": "Bleeding",
   "effect.imbleeding.bleedout": "Bleed out",
   "effect.imbleeding.health_loss": "Health Loss",

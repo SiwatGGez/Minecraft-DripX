@@ -13,18 +13,18 @@ public class BleedoutEffect extends StatusEffect {
     }
 
     @Override
-    public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
+    public boolean applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         if (!pLivingEntity.getWorld().isClient() && ImBleeding.config.bleedoutKills) {
             if(pLivingEntity.hasStatusEffect(ModEffects.BLEED_EFFECT) && pLivingEntity.getActiveStatusEffects().get(ModEffects.BLEEDOUT).getDuration() > ImBleeding.config.bleedoutLength + ImBleeding.config.bleedoutLength/2) pLivingEntity.damage(ModDamageTypes.of(pLivingEntity.getWorld(), ModDamageTypes.BLEEDING_DAMAGE), 200F);
         }
 
-        super.applyUpdateEffect(pLivingEntity, pAmplifier);
+        return super.applyUpdateEffect(pLivingEntity, pAmplifier);
     }
 
     @Override
     public boolean canApplyUpdateEffect(int pDuration, int pAmplifier) {
         int i;
-        if (this == ModEffects.BLEEDOUT) {
+        if (this == ModEffects.BLEEDOUT.value()) {
             i = 60 >> pAmplifier;
             if (i > 0) {
                 return pDuration % i == 0;

@@ -16,6 +16,6 @@ public final class ModEntityTypeTags {
     }
 
     private static TagKey<EntityType<?>> register(String id) {
-        return TagKey.of(RegistryKeys.ENTITY_TYPE, new Identifier(ImBleeding.MOD_ID, id));
+        return TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(ImBleeding.MOD_ID, id));
     }
 }

@@ -14,6 +14,6 @@ public final class ModDamageTypeTags {
     private ModDamageTypeTags(){
     }
     private static TagKey<DamageType> register(String id) {
-        return TagKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier(ImBleeding.MOD_ID, id));
+        return TagKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(ImBleeding.MOD_ID, id));
     }
 }

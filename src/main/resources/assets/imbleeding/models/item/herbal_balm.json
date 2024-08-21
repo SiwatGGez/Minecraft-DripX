@@ -6,7 +6,7 @@
   "overrides": [
     {
       "predicate": {
-        "balm": 1
+        "imbleeding:balm": 1
       },
       "model": "imbleeding:item/herbal_balm_use"
     }

@@ -13,7 +13,7 @@ public class BleedEffect extends StatusEffect {
     }
 
     @Override
-    public void applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
+    public boolean applyUpdateEffect(LivingEntity pLivingEntity, int pAmplifier) {
         if (!pLivingEntity.getWorld().isClient()) {
             int multiplier = pAmplifier + 1;
             float damage = multiplier * ImBleeding.config.bleedingDamage;
@@ -32,13 +32,13 @@ public class BleedEffect extends StatusEffect {
 
         }
 
-        super.applyUpdateEffect(pLivingEntity, pAmplifier);
+        return super.applyUpdateEffect(pLivingEntity, pAmplifier);
     }
 
     @Override
     public boolean canApplyUpdateEffect(int pDuration, int pAmplifier) {
         int i;
-        if (this == ModEffects.BLEED_EFFECT) {
+        if (this == ModEffects.BLEED_EFFECT.value()) {
             i = ImBleeding.config.bleedingDamageFrequency;
             return pDuration % i == 0;
         }

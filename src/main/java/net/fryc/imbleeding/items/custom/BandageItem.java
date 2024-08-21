@@ -33,7 +33,7 @@ public class BandageItem extends Item {
         return stack;
     }
 
-    public int getMaxUseTime(ItemStack stack) {
+    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
         return stack.getItem() == ModItems.STICKY_BANDAGE ? 15 : 40;
     }
 

@@ -1,14 +1,15 @@
 package net.fryc.imbleeding.recipes;
 
 import net.fryc.imbleeding.items.ModItems;
-import net.minecraft.inventory.RecipeInputInventory;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.potion.PotionUtil;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SpecialCraftingRecipe;
 import net.minecraft.recipe.book.CraftingRecipeCategory;
-import net.minecraft.registry.DynamicRegistryManager;
+import net.minecraft.recipe.input.CraftingRecipeInput;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.world.World;
 
 public class SoakedBandageRecipe extends SpecialCraftingRecipe {
@@ -20,10 +21,10 @@ public class SoakedBandageRecipe extends SpecialCraftingRecipe {
     }
 
     @Override
-    public boolean matches(RecipeInputInventory inventory, World world) {
+    public boolean matches(CraftingRecipeInput recipeInput, World world) {
         int bandagesPresent = 0;
         int potionsPresent = 0;
-        for(ItemStack stack : inventory.getInputStacks()){
+        for(ItemStack stack : recipeInput.getStacks()){
             if(stack.isOf(ModItems.BANDAGE)){
                 bandagesPresent++;
             }
@@ -38,9 +39,9 @@ public class SoakedBandageRecipe extends SpecialCraftingRecipe {
     }
 
     @Override
-    public ItemStack craft(RecipeInputInventory inventory, DynamicRegistryManager registryManager) {
+    public ItemStack craft(CraftingRecipeInput recipeInput, RegistryWrapper.WrapperLookup wrapperLookup) {
         ItemStack potion = ItemStack.EMPTY;
-        for(ItemStack stack : inventory.getInputStacks()){
+        for(ItemStack stack : recipeInput.getStacks()){
             if(stack.isOf(Items.LINGERING_POTION)){
                 potion = stack;
             }
@@ -48,8 +49,7 @@ public class SoakedBandageRecipe extends SpecialCraftingRecipe {
         if(potion.isEmpty()) return potion;
 
         ItemStack bandages = new ItemStack(ModItems.SOAKED_BANDAGE, BANDAGES_COUNT);
-        PotionUtil.setPotion(bandages, PotionUtil.getPotion(potion));
-        PotionUtil.setCustomPotionEffects(bandages, PotionUtil.getCustomPotionEffects(potion));
+        bandages.set(DataComponentTypes.POTION_CONTENTS, (PotionContentsComponent)potion.get(DataComponentTypes.POTION_CONTENTS));
 
         return bandages;
     }

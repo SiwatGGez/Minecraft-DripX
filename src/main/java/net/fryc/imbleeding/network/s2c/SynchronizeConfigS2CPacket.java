@@ -1,14 +1,12 @@
 package net.fryc.imbleeding.network.s2c;
 
-import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fryc.imbleeding.network.payloads.SynchronizeConfigPayload;
 import net.fryc.imbleeding.util.ConfigHelper;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayNetworkHandler;
-import net.minecraft.network.PacketByteBuf;
 
 public class SynchronizeConfigS2CPacket {
 
-    public static void receive(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender){
-        ConfigHelper.enableCombatRollCompatibility = buf.readBoolean();
+    public static void receive(SynchronizeConfigPayload payload, ClientPlayNetworking.Context context){
+        ConfigHelper.enableCombatRollCompatibility = payload.combatRollCompat();
     }
 }

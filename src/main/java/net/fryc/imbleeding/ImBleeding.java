@@ -7,6 +7,7 @@ import net.fryc.imbleeding.config.ImbleedingConfig;
 import net.fryc.imbleeding.effects.ModEffects;
 import net.fryc.imbleeding.effects.particles.ModParticles;
 import net.fryc.imbleeding.items.ModItems;
+import net.fryc.imbleeding.network.ModPackets;
 import net.fryc.imbleeding.recipes.ModRecipeSerializers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,8 @@ public class ImBleeding implements ModInitializer {
 		ModEffects.registerEffects();
 		ModItems.registerModItems();
 		ModParticles.registerModParticles();
+
+		ModPackets.registerPayloads();
 
 	}
 }

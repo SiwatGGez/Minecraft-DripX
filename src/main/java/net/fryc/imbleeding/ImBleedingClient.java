@@ -10,13 +10,14 @@ import net.fryc.imbleeding.items.ModItems;
 import net.fryc.imbleeding.items.custom.BalmItem;
 import net.fryc.imbleeding.network.ModPackets;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.potion.PotionUtil;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.util.Identifier;
 
 public class ImBleedingClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ModelPredicateProviderRegistry.register(new Identifier("balm"), (stack, world, entity, seed) -> {
+        ModelPredicateProviderRegistry.register(Identifier.of(ImBleeding.MOD_ID, "balm"), (stack, world, entity, seed) -> {
             return entity != null && entity.isUsingItem() && entity.getActiveItem().getItem() instanceof BalmItem ? 1.0F : 0.0F;
         });
 
@@ -24,6 +25,6 @@ public class ImBleedingClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticles.BLOOD_PARTICLE_LAND, BloodParticleLand.Factory::new);
         ModPackets.registerS2CPackets();
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> tintIndex == 1 ? PotionUtil.getColor(stack) : -1, ModItems.SOAKED_BANDAGE);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> tintIndex == 1 ? stack.getOrDefault(DataComponentTypes.POTION_CONTENTS, PotionContentsComponent.DEFAULT).getColor() : -1, ModItems.SOAKED_BANDAGE);
     }
 }

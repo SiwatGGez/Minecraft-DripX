@@ -1,4 +1,11 @@
 {
+  "tag.item.imbleeding.tulips": "Tulipany",
+  "tag.item.imbleeding.bandages": "Bandaże",
+  "tag.item.imbleeding.items_remove_bleeding": "Przedmioty, które leczą Krwawienie",
+  "tag.item.imbleeding.items_remove_health_loss": "Przedmioty, które leczą Utratę Zdrowia",
+  "tag.item.imbleeding.items_remove_broken": "Przedmioty, które leczą Połamanie",
+  "tag.item.imbleeding.items_remove_bleedout": "Przedmioty, które leczą Wykrwawienie",
+
   "item.imbleeding.bandage": "Bandaż",
   "item.imbleeding.honey_bandage": "Bandaż z Miodem",
   "item.imbleeding.sticky_bandage": "Lepki Bandaż",

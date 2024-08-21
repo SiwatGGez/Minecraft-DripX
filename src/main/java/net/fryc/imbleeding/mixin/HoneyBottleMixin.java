@@ -17,7 +17,7 @@ abstract class HoneyBottleMixin extends Item {
         super(settings);
     }
 
-    //Honey bottle removes health loss and heals
+    //Honey bottle heals
     @Inject(at = @At("HEAD"), method = "finishUsing(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/item/ItemStack;")
     private void heal(ItemStack stack, World world, LivingEntity user ,CallbackInfoReturnable<Object> info) {
         if (!world.isClient) {
