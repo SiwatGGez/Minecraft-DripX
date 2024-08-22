@@ -59,19 +59,6 @@ public class ModItems {
 
     }
 
-    /*
-    private static void addPotions(ItemGroup.Entries entries, RegistryWrapper<Potion> registryWrapper, Item item, ItemGroup.StackVisibility visibility) {
-        registryWrapper.streamEntries().filter((entry) -> {
-            return !entry.matchesKey(Potions.EMPTY_KEY);
-        }).map((entry) -> {
-            return PotionUtil.setPotion(new ItemStack(item), (Potion)entry.value());
-        }).forEach((stack) -> {
-            entries.add(stack, visibility);
-        });
-    }
-
-     */
-
     private static void addPotions(ItemGroup.Entries entries, RegistryWrapper<Potion> registryWrapper, Item item, ItemGroup.StackVisibility visibility, FeatureSet enabledFeatures) {
         registryWrapper.streamEntries().filter((potionEntry) -> {
             return ((Potion)potionEntry.value()).isEnabled(enabledFeatures);

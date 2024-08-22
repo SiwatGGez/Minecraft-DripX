@@ -38,6 +38,10 @@
   "item.imbleeding.soaked_bandage.effect.turtle_master": "Bandaż Żółwiego Mistrza",
   "item.imbleeding.soaked_bandage.effect.water_breathing": "Bandaż Oddychania pod wodą",
   "item.imbleeding.soaked_bandage.effect.weakness": "Bandaż Słabości",
+  "item.imbleeding.soaked_bandage.effect.weaving": "Bandaż Przędzenia",
+  "item.imbleeding.soaked_bandage.effect.wind_charged": "Bandaż Napowietrzenia",
+  "item.imbleeding.soaked_bandage.effect.oozing": "Bandaż Zaszlamienia",
+  "item.imbleeding.soaked_bandage.effect.infested": "Bandaż Zarobaczenia",
   
   "text.autoconfig.imbleeding.title": "Konfiguracja Haemorrhage",
   "text.autoconfig.imbleeding.category.bleeding": "Krwawienie",

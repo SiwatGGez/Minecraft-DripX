@@ -58,7 +58,11 @@ public class SoakedBandageItem extends BandageItem {
             Potions.LONG_WEAKNESS.value(),
             Potions.LUCK.value(),
             Potions.SLOW_FALLING.value(),
-            Potions.LONG_SLOW_FALLING.value()
+            Potions.LONG_SLOW_FALLING.value(),
+            Potions.OOZING.value(),
+            Potions.WIND_CHARGED.value(),
+            Potions.INFESTED.value(),
+            Potions.WEAVING.value()
     );
 
     public SoakedBandageItem(Settings settings) {

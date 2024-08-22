@@ -38,6 +38,10 @@
   "item.imbleeding.soaked_bandage.effect.turtle_master": "Bandage of the Turtle Master",
   "item.imbleeding.soaked_bandage.effect.water_breathing": "Bandage of Water Breathing",
   "item.imbleeding.soaked_bandage.effect.weakness": "Bandage of Weakness",
+  "item.imbleeding.soaked_bandage.effect.weaving": "Bandage of Weaving",
+  "item.imbleeding.soaked_bandage.effect.wind_charged": "Bandage of Wind Charging",
+  "item.imbleeding.soaked_bandage.effect.oozing": "Bandage of Oozing",
+  "item.imbleeding.soaked_bandage.effect.infested": "Bandage of Infestation",
   
 
   "text.autoconfig.imbleeding.title": "Haemorrhage Config",
